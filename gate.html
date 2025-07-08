@@ -178,6 +178,30 @@
 
             const isNAT = q.questionType && q.questionType.toLowerCase() === 'nat';
 
+            // Process question text to separate code blocks
+            // This regex now captures any language identifier after ```
+            const codeBlockRegex = /(```(\w*)\s*[\s\S]*?```)/g;
+            const parts = q.question.split(codeBlockRegex);
+
+            let formattedQuestionContent = '';
+            // Iterate through parts to identify and format code blocks
+            // Note: split with a capturing group returns the captured group as well
+            // So, parts will be [text_before_code, code_block_full_match, language_id, text_after_code, ...]
+            for (let i = 0; i < parts.length; i++) {
+                const part = parts[i];
+                if (part && part.startsWith('```') && part.endsWith('```')) {
+                    // This is a full code block match (e.g., "```c\nint main()...```")
+                    const language = parts[i+1] || ''; // The next element in parts array is the captured language
+                    const codeContent = part.substring(3 + language.length, part.length - 3).trim(); // Remove ```, language, and final ```
+                    formattedQuestionContent += `<pre><code class="language-${language}">${codeContent}</code></pre>`;
+                    i++; // Skip the language part as it's already processed
+                } else if (part) {
+                    // Regular text, wrap in paragraph
+                    formattedQuestionContent += `<p>${part}</p>`;
+                }
+            }
+
+
             if (isNAT) {
                 optionsHtml = `
                     <div class="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md">
@@ -209,7 +233,7 @@
                     <span>Year: <span class="font-medium">${q.year || 'N/A'}</span></span>
                     <span>Q. No.: <span class="font-medium">${q.questionNumber || 'N/A'}</span></span>
                 </div>
-                <p class="text-lg font-semibold text-gray-800 mb-4 question-content">Q. ${q.question}</p>
+                <div class="text-lg font-semibold text-gray-800 mb-4 question-content">${formattedQuestionContent}</div>
                 <div class="options-group">
                     ${optionsHtml}
                 </div>
