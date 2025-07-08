@@ -1,0 +1,34 @@
+/* style.css */
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Tailwind CSS CDN */
+@import url('https://cdn.tailwindcss.com');
+
+/* Custom styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ensure MathJax elements are properly aligned and sized */
+mjx-container {
+    vertical-align: middle !important;
+}
+
+/* Style for the options when selected/feedback is given */
+.option-label.correct {
+    background-color: #d1fae5; /* green-100 */
+    border-color: #34d399; /* green-400 */
+}
+
+.option-label.incorrect {
+    background-color: #fee2e2; /* red-100 */
+    border-color: #ef4444; /* red-500 */
+}
+
+/* Specific styling for the correct option when an incorrect answer is chosen */
+.option-label.show-correct {
+    background-color: #d1fae5; /* green-100 */
+    border-color: #34d399; /* green-400 */
+}
