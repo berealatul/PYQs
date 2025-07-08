@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATE Exam Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-inter min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">GATE Exam Practice</h1>
+
+        <div class="mb-6 text-left">
+            <label for="year-select" class="block text-gray-700 text-sm font-medium mb-2">Select Year:</label>
+            <select id="year-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">-- Select Year --</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <!-- Add more years as needed -->
+            </select>
+        </div>
+
+        <div class="mb-8 text-left">
+            <label for="topic-select" class="block text-gray-700 text-sm font-medium mb-2">Select Core Topic:</label>
+            <select id="topic-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">-- Select Topic --</option>
+                <!-- Options will be populated dynamically or hardcoded based on your CSV -->
+                <option value="General Aptitude">General Aptitude</option>
+                <option value="Engineering Mathematics">Engineering Mathematics</option>
+                <option value="Computer Networks">Computer Networks</option>
+                <option value="Operating System">Operating System</option>
+                <option value="Algorithms">Algorithms</option>
+                <option value="Digital Logic">Digital Logic</option>
+            </select>
+        </div>
+
+        <button id="start-quiz-btn" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105">
+            Start Practice
+        </button>
+    </div>
+
+    <script>
+        document.getElementById('start-quiz-btn').addEventListener('click', function() {
+            const year = document.getElementById('year-select').value;
+            const topic = document.getElementById('topic-select').value;
+
+            if (year && topic) {
+                // Encode topic for URL safety
+                const encodedTopic = encodeURIComponent(topic);
+                window.location.href = `quiz.html?year=${year}&topic=${encodedTopic}`;
+            } else {
+                alert('Please select both a year and a topic.');
+            }
+        });
+    </script>
+</body>
+</html>
