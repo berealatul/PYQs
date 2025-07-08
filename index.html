@@ -3,13 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GATE Exam Quiz</title>
+    <title>Exam Practice Selector</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-inter min-h-screen flex items-center justify-center p-4">
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">GATE Exam Practice</h1>
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Select Your Practice Exam</h1>
+
+        <div class="mb-6 text-left">
+            <label for="exam-select" class="block text-gray-700 text-sm font-medium mb-2">Select Exam:</label>
+            <select id="exam-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">-- Select Exam --</option>
+                <option value="gate">GATE</option>
+                <!-- Add more exams like 'jee', 'neet' as needed, ensuring corresponding HTML files exist -->
+            </select>
+        </div>
 
         <div class="mb-6 text-left">
             <label for="year-select" class="block text-gray-700 text-sm font-medium mb-2">Select Year:</label>
@@ -25,7 +35,7 @@
             <label for="topic-select" class="block text-gray-700 text-sm font-medium mb-2">Select Core Topic:</label>
             <select id="topic-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <option value="">-- Select Topic --</option>
-                <!-- Options will be populated dynamically or hardcoded based on your CSV -->
+                <!-- Populate dynamically or hardcode based on your JSON data -->
                 <option value="General Aptitude">General Aptitude</option>
                 <option value="Engineering Mathematics">Engineering Mathematics</option>
                 <option value="Computer Networks">Computer Networks</option>
@@ -42,15 +52,16 @@
 
     <script>
         document.getElementById('start-quiz-btn').addEventListener('click', function() {
+            const exam = document.getElementById('exam-select').value;
             const year = document.getElementById('year-select').value;
             const topic = document.getElementById('topic-select').value;
 
-            if (year && topic) {
-                // Encode topic for URL safety
+            if (exam && year && topic) {
                 const encodedTopic = encodeURIComponent(topic);
-                window.location.href = `quiz.html?year=${year}&topic=${encodedTopic}`;
+                // Redirect to examName.html, passing exam, year, and topic
+                window.location.href = `${exam}.html?exam=${exam}&year=${year}&topic=${encodedTopic}`;
             } else {
-                alert('Please select both a year and a topic.');
+                alert('Please select an exam, year, and topic.');
             }
         });
     </script>
