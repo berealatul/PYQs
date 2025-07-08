@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Papa Parse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <!-- MathJax for LaTeX rendering -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        // Configure MathJax to process new content dynamically
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                renderActions: {
+                    /*
+                     * This custom render action is necessary to ensure MathJax
+                     * reprocesses content that is dynamically added to the DOM.
+                     * Without this, new questions (with LaTeX) would not render.
+                     */
+                    find: [10, function (doc) {
+                        for (const node of doc.dom.querySelectorAll('.question-content, .option-text')) {
+                            doc.options.elements.push(node);
+                        }
+                    }, '']
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-100 font-inter min-h-screen flex flex-col items-center p-4">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
+        <h1 id="quiz-title" class="text-3xl font-bold text-gray-800 mb-6 text-center"></h1>
+        <div id="question-container" class="mb-8">
+            <!-- Question and options will be loaded here -->
+        </div>
+
+        <div class="flex justify-between items-center mt-4">
+            <button id="prev-btn" class="bg-gray-300 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105" disabled>
+                Previous
+            </button>
+            <button id="next-btn" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105">
+                Next
+            </button>
+        </div>
+        <div class="mt-6 text-center">
+            <button id="back-to-home-btn" class="text-blue-600 hover:underline">Back to Homepage</button>
+        </div>
+    </div>
+
+    <script>
+        let allQuestions = [];
+        let filteredQuestions = [];
+        let currentQuestionIndex = 0;
+        let selectedYear = '';
+        let selectedTopic = '';
+
+        const quizTitle = document.getElementById('quiz-title');
+        const questionContainer = document.getElementById('question-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get year and topic from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            selectedYear = urlParams.get('year');
+            selectedTopic = decodeURIComponent(urlParams.get('topic') || ''); // Decode URI component
+
+            if (!selectedYear || !selectedTopic) {
+                alert('Year or Topic not selected. Returning to homepage.');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            quizTitle.textContent = `${selectedYear} GATE - ${selectedTopic} Questions`;
+
+            // Load CSV data
+            PapaParse.parse('questions.csv', {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    allQuestions = results.data;
+                    // Filter questions based on selected year and topic
+                    filteredQuestions = allQuestions.filter(q =>
+                        q.year === selectedYear && q.coreTopic === selectedTopic
+                    );
+
+                    if (filteredQuestions.length === 0) {
+                        questionContainer.innerHTML = `<p class="text-center text-gray-600">No questions found for ${selectedTopic} in ${selectedYear}.</p>`;
+                        nextBtn.disabled = true;
+                        prevBtn.disabled = true;
+                        return;
+                    }
+
+                    displayQuestion(currentQuestionIndex);
+                    updateNavigationButtons();
+                },
+                error: function(err) {
+                    console.error("Error parsing CSV:", err);
+                    questionContainer.innerHTML = '<p class="text-red-600 text-center">Error loading questions. Please try again later.</p>';
+                    nextBtn.disabled = true;
+                    prevBtn.disabled = true;
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    displayQuestion(currentQuestionIndex);
+                    updateNavigationButtons();
+                }
+            });
+
+            nextBtn.addEventListener('click', () => {
+                if (currentQuestionIndex < filteredQuestions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion(currentQuestionIndex);
+                    updateNavigationButtons();
+                } else {
+                    alert('You have reached the end of the questions for this selection!');
+                }
+            });
+
+            document.getElementById('back-to-home-btn').addEventListener('click', () => {
+                window.location.href = 'index.html';
+            });
+        });
+
+        function displayQuestion(index) {
+            const q = filteredQuestions[index];
+            if (!q) {
+                questionContainer.innerHTML = '<p class="text-center text-gray-600">Question not found.</p>';
+                return;
+            }
+
+            let optionsHtml = '';
+            const optionKeys = ['optionA', 'optionB', 'optionC', 'optionD'];
+            const optionLabels = ['A', 'B', 'C', 'D'];
+
+            // Check if it's a NAT question
+            const isNAT = q.questionType && q.questionType.toLowerCase() === 'nat';
+
+            if (isNAT) {
+                optionsHtml = `
+                    <div class="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+                        <p class="text-yellow-800 font-medium">This is a Numerical Answer Type (NAT) question. The answer will be displayed below.</p>
+                    </div>
+                `;
+            } else {
+                for (let i = 0; i < optionKeys.length; i++) {
+                    const optionText = q[optionKeys[i]];
+                    if (optionText && optionText.trim() !== 'NA') { // Only display if option exists and is not 'NA'
+                        optionsHtml += `
+                            <label class="block mt-3 p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-blue-50 transition duration-200 ease-in-out option-label">
+                                <input type="radio" name="answer-option-${q.questionNumber}" value="${optionLabels[i]}" class="mr-2 question-option">
+                                <span class="option-text">${optionLabels[i]}) ${optionText}</span>
+                            </label>
+                        `;
+                    }
+                }
+            }
+
+
+            questionContainer.innerHTML = `
+                <div class="text-sm text-gray-500 mb-2">Question ${index + 1} of ${filteredQuestions.length}</div>
+                <div class="question-card bg-gray-50 p-6 rounded-lg border border-gray-200">
+                    <p class="text-lg font-semibold text-gray-800 mb-4 question-content">Q.${q.questionNumber}: ${q.question}</p>
+                    <div class="options-group">
+                        ${optionsHtml}
+                    </div>
+                    <div id="feedback-${q.questionNumber}" class="mt-4 text-center font-bold"></div>
+                    <div id="correct-answer-${q.questionNumber}" class="mt-2 text-center text-gray-700"></div>
+                </div>
+            `;
+
+            // If it's a NAT question, display the answer immediately
+            if (isNAT) {
+                const correctAnswerDiv = document.getElementById(`correct-answer-${q.questionNumber}`);
+                correctAnswerDiv.innerHTML = `<p class="text-green-700">Correct Answer: ${q.Answer}</p>`;
+            } else {
+                // Add event listeners for radio buttons if not NAT
+                document.querySelectorAll('.question-option').forEach(radio => {
+                    radio.addEventListener('change', (event) => {
+                        checkAnswer(event.target.value, q.Answer, q.questionNumber);
+                    });
+                });
+            }
+
+            // Re-render MathJax after new content is added
+            if (typeof MathJax !== 'undefined') {
+                MathJax.typesetPromise([questionContainer]).then(() => {
+                    console.log('MathJax typeset complete for new content.');
+                }).catch((err) => {
+                    console.error('MathJax typesetting error:', err);
+                });
+            }
+        }
+
+        function checkAnswer(selectedOption, correctAnswer, questionNumber) {
+            const feedbackDiv = document.getElementById(`feedback-${questionNumber}`);
+            const correctAnswerDiv = document.getElementById(`correct-answer-${questionNumber}`);
+            const options = document.querySelectorAll(`input[name="answer-option-${questionNumber}"]`);
+
+            // Disable all options after selection
+            options.forEach(option => {
+                option.disabled = true;
+                const label = option.closest('.option-label');
+                label.classList.remove('hover:bg-blue-50'); // Remove hover effect
+                label.style.cursor = 'default'; // Change cursor
+            });
+
+            if (selectedOption === correctAnswer) {
+                feedbackDiv.className = 'mt-4 text-center font-bold text-green-600';
+                feedbackDiv.textContent = 'Correct!';
+            } else {
+                feedbackDiv.className = 'mt-4 text-center font-bold text-red-600';
+                feedbackDiv.textContent = 'Incorrect!';
+            }
+
+            // Display the correct answer
+            correctAnswerDiv.innerHTML = `<p class="text-green-700">The correct answer is: <strong>${correctAnswer}</strong></p>`;
+        }
+
+        function updateNavigationButtons() {
+            prevBtn.disabled = currentQuestionIndex === 0;
+            nextBtn.disabled = currentQuestionIndex === filteredQuestions.length - 1;
+        }
+    </script>
+</body>
+</html>
