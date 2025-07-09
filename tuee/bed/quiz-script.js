@@ -15,8 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuestionIndex = 0;
     let score = 0;
     let timerInterval;
-    let timeLeft = 0; // In seconds, e.g., 600 seconds for 10 minutes per question or total quiz.
-    const TIME_PER_QUESTION_SECONDS = 60; // 1 minute per question
+    // Changed from TIME_PER_QUESTION_SECONDS to TOTAL_QUIZ_TIME_SECONDS
+    const TOTAL_QUIZ_TIME_SECONDS = 2 * 60 * 60; // 2 hours in seconds
+    const MARKS_PER_QUESTION = 2; // Marks for each correct answer
+
+    let timeLeft = TOTAL_QUIZ_TIME_SECONDS; // Initialize with total quiz time
 
     // Store user's selected answers and whether they got it right
     let userAnswers = []; // Array of objects: { selectedOption: 'A', isCorrect: true/false }
@@ -100,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         userAnswers = Array(questions.length).fill(null); // Initialize user answers array
         scoreSpan.textContent = score;
         displayQuestion();
-        startTimer();
+        // Start the global timer only once when the quiz initializes
+        startGlobalTimer();
         updateNavigationButtons();
     }
 
@@ -205,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const feedbackMessage = quizContent.querySelector('.feedback-message');
 
         if (isCorrect) {
-            score++;
+            score += MARKS_PER_QUESTION; // Increment score by MARKS_PER_QUESTION
             scoreSpan.textContent = score;
             feedbackMessage.textContent = 'Correct!';
             feedbackMessage.classList.remove('text-red-700', 'text-yellow-700');
@@ -243,11 +247,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Starts or resets the timer for the current question.
+     * Starts the global timer for the entire quiz.
      */
-    function startTimer() {
+    function startGlobalTimer() {
         clearInterval(timerInterval); // Clear any existing timer
-        timeLeft = TIME_PER_QUESTION_SECONDS; // Reset time for current question
+        // timeLeft is already initialized with TOTAL_QUIZ_TIME_SECONDS
         updateTimerDisplay();
 
         timerInterval = setInterval(() => {
@@ -255,21 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateTimerDisplay();
             if (timeLeft <= 0) {
                 clearInterval(timerInterval);
-                // Automatically move to next question or handle time out
-                // For now, let's just indicate time's up
-                const feedbackMessage = quizContent.querySelector('.feedback-message');
-                if (feedbackMessage && feedbackMessage.classList.contains('hidden')) {
-                    feedbackMessage.classList.remove('hidden');
-                    feedbackMessage.textContent = "Time's up!";
-                    feedbackMessage.classList.add('text-red-700');
-                }
-                // If the user hasn't answered, mark it as incorrect (or unanswered)
-                if (!userAnswers[currentQuestionIndex] || userAnswers[currentQuestionIndex].isCorrect === null) {
-                    userAnswers[currentQuestionIndex] = { selectedOption: null, isCorrect: false }; // Mark as incorrect
-                    revealAnswer(questions[currentQuestionIndex].answer, null); // Show correct answer
-                }
-                quizContent.querySelector('.submit-answer-btn').disabled = true;
-                document.getElementById('options-list').classList.add('options-disabled');
+                endQuiz(); // Call endQuiz when time runs out
             }
         }, 1000);
     }
@@ -278,20 +268,42 @@ document.addEventListener('DOMContentLoaded', () => {
      * Updates the timer display.
      */
     function updateTimerDisplay() {
-        const minutes = Math.floor(timeLeft / 60);
+        const hours = Math.floor(timeLeft / 3600);
+        const minutes = Math.floor((timeLeft % 3600) / 60);
         const seconds = timeLeft % 60;
-        timerSpan.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        timerSpan.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    /**
+     * Ends the quiz and shows the final score modal.
+     */
+    function endQuiz() {
+        clearInterval(timerInterval); // Ensure timer stops
+        // Disable all interactive elements
+        if (quizContent) {
+            quizContent.classList.add('options-disabled'); // Disable options for current question
+            const submitBtn = quizContent.querySelector('.submit-answer-btn');
+            if (submitBtn) submitBtn.disabled = true;
+        }
+        prevQuestionBtn.disabled = true;
+        nextQuestionBtn.disabled = true;
+
+        showQuizEndModal();
     }
 
     /**
      * Updates the enabled/disabled state of navigation buttons.
      */
     function updateNavigationButtons() {
+        // Navigation buttons are primarily for moving between questions.
+        // Their state depends on currentQuestionIndex, not the global timer.
         prevQuestionBtn.disabled = (currentQuestionIndex === 0);
         nextQuestionBtn.disabled = (currentQuestionIndex === questions.length - 1);
-        if (currentQuestionIndex === questions.length - 1 && userAnswers[currentQuestionIndex]?.isCorrect !== null) {
-            // If on last question and answered, enable "Finish Quiz" type behavior or show modal
-            // For now, just ensure next is disabled
+
+        // If quiz has ended due to time, all buttons should be disabled.
+        if (timeLeft <= 0) {
+            prevQuestionBtn.disabled = true;
+            nextQuestionBtn.disabled = true;
         }
     }
 
@@ -302,9 +314,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentQuestionIndex > 0) {
             currentQuestionIndex--;
             displayQuestion();
-            // Do not restart timer when navigating back, only on initial load or if user explicitly restarts
-            clearInterval(timerInterval); // Stop timer when reviewing
-            timerSpan.textContent = "Review"; // Indicate review mode
             updateNavigationButtons();
         }
     });
@@ -323,12 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
             displayQuestion();
-            startTimer(); // Restart timer for the new question
             updateNavigationButtons();
         } else {
-            // Quiz ends
-            clearInterval(timerInterval);
-            showQuizEndModal();
+            // Quiz ends when all questions are navigated through
+            endQuiz();
         }
     });
 
@@ -345,6 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     restartQuizBtn.addEventListener('click', () => {
         quizEndModal.classList.add('hidden');
+        timeLeft = TOTAL_QUIZ_TIME_SECONDS; // Reset timer for restart
         initializeQuiz();
     });
 
