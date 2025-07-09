@@ -1,69 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exam Practice Selector</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Previous Year Question Papers</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-inter min-h-screen flex items-center justify-center p-4">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full text-center">
-        <h1 class="text-3xl font-bold text-gray-800 mb-6">Select Your Practice Exam</h1>
+    <style>
+      /* Custom font for better aesthetics */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-gray-200"
+    >
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-6 tracking-tight">
+        Select Your Exam
+      </h1>
+      <p class="text-gray-600 mb-8 text-lg">
+        Choose an exam from the dropdown to access its previous year question
+        papers.
+      </p>
 
-        <div class="mb-6 text-left">
-            <label for="exam-select" class="block text-gray-700 text-sm font-medium mb-2">Select Exam:</label>
-            <select id="exam-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option value="">-- Select Exam --</option>
-                <option value="gate">GATE</option>
-                <!-- Add more exams like 'jee', 'neet' as needed, ensuring corresponding HTML files exist -->
-            </select>
-        </div>
-
-        <div class="mb-6 text-left">
-            <label for="year-select" class="block text-gray-700 text-sm font-medium mb-2">Select Year:</label>
-            <select id="year-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option value="">-- Select Year --</option>
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
-                <!-- Add more years as needed -->
-            </select>
-        </div>
-
-        <div class="mb-8 text-left">
-            <label for="topic-select" class="block text-gray-700 text-sm font-medium mb-2">Select Core Topic:</label>
-            <select id="topic-select" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option value="">-- Select Topic --</option>
-                <!-- Populate dynamically or hardcode based on your JSON data -->
-                <option value="General Aptitude">General Aptitude</option>
-                <option value="Engineering Mathematics">Engineering Mathematics</option>
-                <option value="Computer Networks">Computer Networks</option>
-                <option value="Operating System">Operating System</option>
-                <option value="Algorithms">Algorithms</option>
-                <option value="Digital Logic">Digital Logic</option>
-            </select>
-        </div>
-
-        <button id="start-quiz-btn" class="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105">
-            Start Practice
+      <div class="space-y-4" id="exam-selection-container">
+        <label for="exam-select" class="sr-only">Select Exam:</label>
+        <select
+          id="exam-select"
+          class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 text-gray-800 text-lg"
+        >
+          <!-- Exam options will be populated by JavaScript -->
+        </select>
+        <button
+          id="go-to-exam-button"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 mt-4"
+        >
+          Go to Exam
         </button>
+      </div>
+
+      <p class="mt-8 text-sm text-gray-500">Conceptualized by Atul Prakash</p>
     </div>
 
     <script>
-        document.getElementById('start-quiz-btn').addEventListener('click', function() {
-            const exam = document.getElementById('exam-select').value;
-            const year = document.getElementById('year-select').value;
-            const topic = document.getElementById('topic-select').value;
+      document.addEventListener("DOMContentLoaded", async () => {
+        const examSelect = document.getElementById("exam-select");
+        const goToExamButton = document.getElementById("go-to-exam-button");
 
-            if (exam && year && topic) {
-                const encodedTopic = encodeURIComponent(topic);
-                // Redirect to examName.html, passing exam, year, and topic
-                window.location.href = `${exam}.html?exam=${exam}&year=${year}&topic=${encodedTopic}`;
+        let exams = []; // Initialize as empty, will be populated from JSON
+
+        try {
+          // Fetch the supportedExam.json file
+          const response = await fetch("supportedExam.json");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          exams = await response.json();
+          console.log("Loaded supported exams:", exams);
+
+          // Populate the dropdown
+          if (examSelect) {
+            // Add a default "Select an Exam" option
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.textContent = "Select an Exam";
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            examSelect.appendChild(defaultOption);
+
+            exams.forEach((exam) => {
+              const option = document.createElement("option");
+              option.value = exam.value;
+              option.textContent = exam.name;
+              examSelect.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error("Error loading supported exams:", error);
+          // Display an error message to the user
+          if (examSelect) {
+            examSelect.innerHTML =
+              '<option value="">Error loading exams</option>';
+            examSelect.disabled = true;
+          }
+          if (goToExamButton) {
+            goToExamButton.disabled = true;
+            goToExamButton.textContent = "Error Loading";
+            goToExamButton.classList.remove(
+              "bg-indigo-600",
+              "hover:bg-indigo-700"
+            );
+            goToExamButton.classList.add("bg-gray-400", "cursor-not-allowed");
+          }
+          const errorDiv = document.createElement("div");
+          errorDiv.className =
+            "text-red-600 bg-red-50 p-4 rounded-lg border border-red-200 mt-4";
+          errorDiv.innerHTML = `<p class="font-semibold">Could not load exam list.</p><p>${error.message}</p>`;
+          document
+            .getElementById("exam-selection-container")
+            .appendChild(errorDiv);
+        }
+
+        // Handle button click to navigate
+        if (goToExamButton) {
+          goToExamButton.addEventListener("click", () => {
+            const selectedExam = examSelect.value;
+            if (selectedExam) {
+              // Construct the path to the exam's HTML page
+              // Assuming the structure: examName/examName.html
+              window.location.href = `${selectedExam}/index.html`;
             } else {
-                alert('Please select an exam, year, and topic.');
+              // Optionally, add a visual cue if no exam is selected
+              alert("Please select an exam first!"); // Using alert for simplicity, consider a custom modal in production
             }
-        });
+          });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
