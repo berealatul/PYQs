@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUEE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for better aesthetics */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-gray-200"
+    >
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-6 tracking-tight">
+        TUEE Exam
+      </h1>
+      <p class="text-gray-600 mb-8 text-lg">
+        Choose an academic programme to view its previous year question papers.
+      </p>
+
+      <div class="space-y-4" id="programme-selection-container">
+        <label for="programme-select" class="sr-only">Select Programme:</label>
+        <select
+          id="programme-select"
+          class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 text-gray-800 text-lg"
+        >
+          <!-- Programme options will be populated by JavaScript -->
+        </select>
+        <button
+          id="go-to-programme-button"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 mt-4"
+        >
+          Go to Programme
+        </button>
+      </div>
+
+      <p class="mt-8 text-sm text-gray-500">Dedicated to Sweta!</p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const programmeSelect = document.getElementById("programme-select");
+        const goToProgrammeButton = document.getElementById(
+          "go-to-programme-button"
+        );
+
+        let programmes = []; // Initialize as empty, will be populated from JSON
+
+        try {
+          // Fetch the supportedProgramme.json file
+          // Assuming it's in the same directory as this HTML file (TUEE/)
+          const response = await fetch("supportedProgramme.json");
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          programmes = await response.json();
+          console.log("Loaded supported programmes:", programmes);
+
+          // Populate the dropdown
+          if (programmeSelect) {
+            // Add a default "Select a Programme" option
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.textContent = "Select a Programme";
+            defaultOption.disabled = true;
+            defaultOption.selected = true;
+            programmeSelect.appendChild(defaultOption);
+
+            programmes.forEach((programme) => {
+              const option = document.createElement("option");
+              option.value = programme.value;
+              option.textContent = programme.name;
+              programmeSelect.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error("Error loading supported programmes:", error);
+          // Display an error message to the user
+          if (programmeSelect) {
+            programmeSelect.innerHTML =
+              '<option value="">Error loading programmes</option>';
+            programmeSelect.disabled = true;
+          }
+          if (goToProgrammeButton) {
+            goToProgrammeButton.disabled = true;
+            goToProgrammeButton.textContent = "Error Loading";
+            goToProgrammeButton.classList.remove(
+              "bg-indigo-600",
+              "hover:bg-indigo-700"
+            );
+            goToProgrammeButton.classList.add(
+              "bg-gray-400",
+              "cursor-not-allowed"
+            );
+          }
+          const errorDiv = document.createElement("div");
+          errorDiv.className =
+            "text-red-600 bg-red-50 p-4 rounded-lg border border-red-200 mt-4";
+          errorDiv.innerHTML = `<p class="font-semibold">Could not load programme list.</p><p>${error.message}</p>`;
+          document
+            .getElementById("programme-selection-container")
+            .appendChild(errorDiv);
+        }
+
+        // Handle button click to navigate
+        if (goToProgrammeButton) {
+          goToProgrammeButton.addEventListener("click", () => {
+            const selectedProgramme = programmeSelect.value;
+            if (selectedProgramme) {
+              // Construct the path to the programme's index.html page
+              // Assuming the structure: TUEE/programme_value/index.html
+              window.location.href = `${selectedProgramme}/index.html`;
+            } else {
+              // Optionally, add a visual cue if no programme is selected
+              // Replaced alert with a custom message for better UX
+              const messageContainer = document.getElementById(
+                "programme-selection-container"
+              );
+              let existingMessage = document.getElementById(
+                "programme-error-message"
+              );
+              if (!existingMessage) {
+                existingMessage = document.createElement("p");
+                existingMessage.id = "programme-error-message";
+                existingMessage.className = "text-red-500 text-sm mt-2";
+                messageContainer.appendChild(existingMessage);
+              }
+              existingMessage.textContent = "Please select a programme first!";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
