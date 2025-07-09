@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - TUEE B.Ed.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for better aesthetics */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Style for selected option */
+      .option-selected {
+        background-color: #e0e7ff; /* light indigo */
+        border-color: #6366f1; /* indigo-500 */
+        box-shadow: 0 0 0 2px #6366f1; /* Add a subtle ring for better visibility */
+      }
+      /* Style for correct answer after reveal */
+      .option-correct {
+        background-color: #d1fae5; /* light green */
+        border-color: #34d399; /* green-400 */
+        box-shadow: 0 0 0 2px #34d399;
+      }
+      /* Style for incorrect answer after reveal */
+      .option-incorrect {
+        background-color: #fee2e2; /* light red */
+        border-color: #ef4444; /* red-500 */
+        box-shadow: 0 0 0 2px #ef4444;
+      }
+      /* Disable pointer events on options after answer is selected/revealed */
+      .options-disabled .option-item {
+        pointer-events: none;
+        cursor: default; /* Change cursor to indicate non-interactable */
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-4 flex flex-col items-center"
+  >
+    <div class="container mx-auto py-8 max-w-3xl w-full">
+      <div
+        class="bg-white p-6 rounded-2xl shadow-xl border border-gray-200 mb-8"
+      >
+        <h1 class="text-3xl font-extrabold text-gray-800 text-center mb-4">
+          TUEE B.Ed. Quiz
+        </h1>
+        <div class="flex justify-between items-center mb-6">
+          <div class="text-lg font-semibold text-gray-700">
+            Question: <span id="current-question-number">1</span> /
+            <span id="total-questions">0</span>
+          </div>
+          <div class="text-lg font-semibold text-gray-700">
+            Score: <span id="score">0</span>
+          </div>
+          <div class="text-lg font-semibold text-gray-700">
+            Time Left: <span id="timer">00:00</span>
+          </div>
+        </div>
+
+        <div id="quiz-content">
+          <!-- Questions will be loaded here -->
+          <div class="text-center text-gray-500 p-8">
+            <p>Loading quiz...</p>
+          </div>
+        </div>
+
+        <div
+          id="navigation-buttons"
+          class="flex justify-between mt-8 space-x-4"
+        >
+          <button
+            id="prev-question-btn"
+            class="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-3 px-6 rounded-xl shadow-md transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Previous
+          </button>
+          <button
+            id="next-question-btn"
+            class="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz End Modal -->
+    <div
+      id="quiz-end-modal"
+      class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 hidden"
+    >
+      <div
+        class="bg-white p-8 rounded-2xl shadow-2xl text-center max-w-sm w-full border border-gray-200"
+      >
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Quiz Completed!</h2>
+        <p class="text-xl text-gray-700 mb-6">
+          Your Final Score:
+          <span id="final-score" class="font-extrabold text-indigo-600">0</span>
+        </p>
+        <button
+          id="restart-quiz-btn"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75"
+        >
+          Restart Quiz
+        </button>
+        <button
+          id="back-to-selection-btn"
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-3 px-6 rounded-xl shadow-md transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75 mt-4 ml-2"
+        >
+          Back to Selection
+        </button>
+      </div>
+    </div>
+
+    <!-- Link to the quiz JavaScript file -->
+    <script src="quiz-script.js"></script>
+  </body>
+</html>
