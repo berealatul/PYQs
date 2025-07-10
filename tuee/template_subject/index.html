@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUEE [SUBJECT_NAME]</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom font for better aesthetics */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4"
+  >
+    <div
+      class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-gray-200"
+    >
+      <h1 class="text-4xl font-extrabold text-gray-800 mb-6 tracking-tight">
+        TUEE <span id="subject-display-name">[SUBJECT_NAME]</span>
+      </h1>
+      <p class="text-gray-600 mb-8 text-lg">
+        Choose year and medium for question paper
+      </p>
+
+      <div class="space-y-4" id="paper-selection-container">
+        <div>
+          <label
+            for="year-select"
+            class="block text-gray-700 text-sm font-medium mb-2 text-left"
+            >Select Year:</label
+          >
+          <select
+            id="year-select"
+            class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 text-gray-800 text-lg"
+          >
+            <!-- Options will be populated by JavaScript -->
+          </select>
+        </div>
+        <div>
+          <label
+            for="medium-select"
+            class="block text-gray-700 text-sm font-medium mb-2 text-left"
+            >Select Medium:</label
+          >
+          <select
+            id="medium-select"
+            class="block w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-50 text-gray-800 text-lg"
+          >
+            <!-- Options will be populated by JavaScript -->
+          </select>
+        </div>
+        <button
+          id="start-quiz-button"
+          class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-6 rounded-xl shadow-lg transform transition duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-75 mt-4"
+        >
+          Start Quiz
+        </button>
+      </div>
+
+      <p class="mt-8 text-sm text-gray-500">
+        To contribute use UPI ID: <b>a2ul@icici</b>
+      </p>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const yearSelect = document.getElementById("year-select");
+        const mediumSelect = document.getElementById("medium-select");
+        const startQuizButton = document.getElementById("start-quiz-button");
+        const container = document.getElementById("paper-selection-container");
+
+        // updating subject throughout dynamically
+        const subjectName = "Subject";
+        document.title = `TUEE ${subjectName}`;
+        const subject = document.getElementById("subject-display-name"); // Renamed for clarity
+        subject.textContent = subjectName;
+
+        // Function to load JSON data
+        async function loadJson(filePath) {
+          try {
+            const response = await fetch(filePath);
+            if (!response.ok) {
+              throw new Error(
+                `HTTP error! status: ${response.status} from ${filePath}`
+              );
+            }
+            return await response.json();
+          } catch (error) {
+            console.error(`Error loading ${filePath}:`, error);
+            return null;
+          }
+        }
+
+        // Populate Year Dropdown
+        const years = await loadJson("supportedYear.json");
+        if (years) {
+          const defaultYearOption = document.createElement("option");
+          defaultYearOption.value = "";
+          defaultYearOption.textContent = "Select Year";
+          defaultYearOption.disabled = true;
+          defaultYearOption.selected = true;
+          yearSelect.appendChild(defaultYearOption);
+
+          years.forEach((year) => {
+            const option = document.createElement("option");
+            option.value = year.value;
+            option.textContent = year.name;
+            yearSelect.appendChild(option);
+          });
+        } else {
+          yearSelect.innerHTML =
+            '<option value="">Error loading years</option>';
+          yearSelect.disabled = true;
+        }
+
+        // Populate Medium Dropdown
+        const mediums = await loadJson("supportedMedium.json");
+        if (mediums) {
+          // Clear existing options first to ensure default is set correctly
+          mediumSelect.innerHTML = "";
+
+          // Add a default "Select Medium" option
+          const defaultMediumOption = document.createElement("option");
+          defaultMediumOption.value = "";
+          defaultMediumOption.textContent = "Select Medium";
+          defaultMediumOption.disabled = true;
+          mediumSelect.appendChild(defaultMediumOption);
+
+          let englishOptionAddedAndSelected = false; // Flag to track if English is found and selected
+
+          mediums.forEach((medium) => {
+            const option = document.createElement("option");
+            option.value = medium.value;
+            option.textContent = medium.name;
+            if (medium.value === "E") {
+              // Set English as default
+              option.selected = true;
+              englishOptionAddedAndSelected = true;
+            }
+            mediumSelect.appendChild(option);
+          });
+
+          // If English was not found or not explicitly set as selected, ensure "Select Medium" is selected
+          if (!englishOptionAddedAndSelected) {
+            defaultMediumOption.selected = true;
+          }
+        } else {
+          mediumSelect.innerHTML =
+            '<option value="">Error loading mediums</option>';
+          mediumSelect.disabled = true;
+        }
+
+        // Handle Start Quiz Button Click
+        startQuizButton.addEventListener("click", () => {
+          const selectedYear = yearSelect.value;
+          const selectedMedium = mediumSelect.value;
+
+          if (selectedYear && selectedMedium) {
+            // Construct the path to quiz.html with query parameters
+            // Example: quiz.html?year=2025&medium=H
+            window.location.href = `quiz.html?year=${selectedYear}&medium=${selectedMedium}`;
+          } else {
+            // Display an error message if selections are not made
+            let existingMessage = document.getElementById(
+              "selection-error-message"
+            );
+            if (!existingMessage) {
+              existingMessage = document.createElement("p");
+              existingMessage.id = "selection-error-message";
+              existingMessage.className = "text-red-500 text-sm mt-4";
+              container.appendChild(existingMessage);
+            }
+            existingMessage.textContent = "Please select both year and medium.";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

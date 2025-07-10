@@ -1,0 +1,22 @@
+{
+  "questions": [
+  {
+    "questionNumber": 1,
+    "questionContent": "In a classroom, the probability of message reception can be enhanced by?",
+    "optionA": "Exposing the ignorance of students",
+    "optionB": "Increasing the information load",
+    "optionC": "Using high decibel audio tools",
+    "optionD": "Establishing a viewpoint",
+    "answer": "D"
+  },
+  {
+    "questionNumber": 2,
+    "questionContent": "The classroom communication should essentially be?",
+    "optionA": "Abstract",
+    "optionB": "Non-descriptive",
+    "optionC": "Contrived",
+    "optionD": "Empathetic",
+    "answer": "D"
+  }
+]
+}
