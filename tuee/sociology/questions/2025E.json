@@ -1,0 +1,454 @@
+{
+  "questions": [
+    {
+      "questionNumber": 1,
+      "questionContent": "What does Durkheim's concept of \"anomie\" refer to?",
+      "optionA": "A state of social solidarity based on shared values.",
+      "optionB": "A condition of normlessness and social deregulation.",
+      "optionC": "The concentration of power in the hands of a ruling elite.",
+      "optionD": "The process of social change and modernization.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 2,
+      "questionContent": "\"Endogamy\" is the practice of marrying:",
+      "optionA": "Within one's social group.",
+      "optionB": "Outside of one's social group.",
+      "optionC": "Multiple spouses.",
+      "optionD": "Only close relatives.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 3,
+      "questionContent": "M.N. Srinivas's concept of \"Sanskritization\" can be understood as:",
+      "optionA": "The process of industrialization in India.",
+      "optionB": "The adoption of upper-caste customs and practices by lower castes.",
+      "optionC": "The spread of Western education in India.",
+      "optionD": "The decline of traditional Indian culture.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 4,
+      "questionContent": "The Right to Information Act, 2005 in India promotes:",
+      "optionA": "Government secrecy.",
+      "optionB": "Political propaganda.",
+      "optionC": "Censorship.",
+      "optionD": "Transparency and accountability.",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 5,
+      "questionContent": "Which state in Northeast India shares the longest international border with Myanmar?",
+      "optionA": "Arunachal Pradesh",
+      "optionB": "Nagaland",
+      "optionC": "Manipur",
+      "optionD": "Mizoram",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 6,
+      "questionContent": "The One Nation, One Election Bill (2024) proposes which of the following issues?",
+      "optionA": "Simultaneous elections for all levels of government",
+      "optionB": "Centralized control of all elections",
+      "optionC": "Abolition of state elections",
+      "optionD": "Mandatory voting for all citizens",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 7,
+      "questionContent": "The Hornbill Festival is a significant cultural event celebrated in which state of India?",
+      "optionA": "Sikkim",
+      "optionB": "Tripura",
+      "optionC": "Nagaland",
+      "optionD": "Meghalaya",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 8,
+      "questionContent": "Who is the author of The Protestant Ethic and the Spirit of Capitalism (1904)?",
+      "optionA": "Karl Marx",
+      "optionB": "Émile Durkheim",
+      "optionC": "Max Weber",
+      "optionD": "Ferdinand Tönnies",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 9,
+      "questionContent": "The term \"varna\" refers to:",
+      "optionA": "The system of sub-castes in India.",
+      "optionB": "The fourfold classification of Hindu society.",
+      "optionC": "The religious rituals performed by Brahmins.",
+      "optionD": "The political economic roles of different castes.",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 10,
+      "questionContent": "Durkheim's study of suicide focused on:",
+      "optionA": "Individual psychological factors.",
+      "optionB": "Social integration and regulation.",
+      "optionC": "Economic determinants.",
+      "optionD": "Biological predispositions.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 11,
+      "questionContent": "The idea of pluralism emphasizes on:",
+      "optionA": "The diversity of social and cultural groups.",
+      "optionB": "The homogeneity of Indian culture.",
+      "optionC": "The dominance of a single religious identity.",
+      "optionD": "The absence of social conflict.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 12,
+      "questionContent": "The Green Revolution in India primarily focused on:",
+      "optionA": "Industrial development in Central India.",
+      "optionB": "Developing and incorporating new technologies into agriculture.",
+      "optionC": "Sustainable infrastructure in urban areas.",
+      "optionD": "Educational institutions.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 13,
+      "questionContent": "Match the concept to the sociologist.\nList A\nList B\na) M.N. Srinivas\ni. Study of kinship organization in India\nb) G.S. Ghurye\nii. Dominant caste\nc) William Wiser\niii. Jajmani system\nd) Iravati Karve\niv. Racial and cultural dimensions of caste",
+      "optionA": "a)-i, b)-ii, c)-iii, d)-iv",
+      "optionB": "a)-ii, b)-iv, c)-iii, d)-i",
+      "optionC": "a)-ii, b)-iv, c)-ii, d)-i",
+      "optionD": "a)-iv, b)-ii, c)-iii, d)-i",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 14,
+      "questionContent": "The \"Inner Line Permit\" (ILP) is currently enforced in which of the following Northeast Indian states?",
+      "optionA": "Assam and Tripura",
+      "optionB": "Meghalaya and Manipur",
+      "optionC": "Arunachal Pradesh, Nagaland, and Mizoram",
+      "optionD": "Sikkim and Meghalaya.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 15,
+      "questionContent": "According to Émile Durkheim, \"social facts\" are:",
+      "optionA": "Individual psychological states.",
+      "optionB": "External and coercive social structures.",
+      "optionC": "Subjective interpretations of reality.",
+      "optionD": "Random occurrences in society.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 16,
+      "questionContent": "A patrilocal residence pattern means that a married couple lives:",
+      "optionA": "With or near the husband's family.",
+      "optionB": "With or near the wife's family.",
+      "optionC": "In a separate, independent household.",
+      "optionD": "Alternating between both families.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 17,
+      "questionContent": "Which of the following language belongs to the Tibeto-Burman language family and is spoken in Northeast India?",
+      "optionA": "Assamese",
+      "optionB": "Bengali",
+      "optionC": "Tani",
+      "optionD": "Khasi",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 18,
+      "questionContent": "The Dimasa kingdom was historically associated with which present-day states?",
+      "optionA": "Nagaland-Assam",
+      "optionB": "Assam-West Bengal",
+      "optionC": "Tripura-Mizoram",
+      "optionD": "Nagaland-Arunachal Pradesh",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 19,
+      "questionContent": "The \"G20 Leaders' Summit 2023\" was hosted by which Indian city?",
+      "optionA": "Mumbai",
+      "optionB": "Bengaluru",
+      "optionC": "Chennai",
+      "optionD": "New Delhi",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 20,
+      "questionContent": "What is the name of India's first indigenously built aircraft carrier launched in 2022?",
+      "optionA": "INS Vikramaditya",
+      "optionB": "INS Chakra",
+      "optionC": "INS Virat",
+      "optionD": "INS Vikrant",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 21,
+      "questionContent": "What is the primary objective of the \"National Education Policy 2020\"?",
+      "optionA": "To increase military spending",
+      "optionB": "To modernize the education system",
+      "optionC": "To promote religious studies",
+      "optionD": "To privatize all educational institutions",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 22,
+      "questionContent": "Which of the following best describes Karl Marx's concept of \"alienation\"?",
+      "optionA": "The feeling of powerlessness and estrangement experienced by workers in a capitalist system.",
+      "optionB": "The breakdown of social norms in modern society.",
+      "optionC": "The process of rationalization and bureaucratization.",
+      "optionD": "The decline of traditional authority.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 23,
+      "questionContent": "The Treaty of Yandaboo (1826) marked the end of which conflict?",
+      "optionA": "The Anglo-Bhutan War",
+      "optionB": "The Anglo-Burmese War",
+      "optionC": "The Sino-Indian War",
+      "optionD": "The Kuki Rebellion",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 24,
+      "questionContent": "Weber's \"ideal type\" is a:",
+      "optionA": "Moral judgment about social phenomena.",
+      "optionB": "Perfect representation of reality.",
+      "optionC": "Conceptual tool for analyzing social phenomena.",
+      "optionD": "Statistical average of social behaviour.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 25,
+      "questionContent": "What is the difference between \"achieved\" and \"ascribed\" status?",
+      "optionA": "Achieved status is earned, ascribed status is assigned.",
+      "optionB": "Achieved status is based on birth, ascribed status is based on merit.",
+      "optionC": "Achieved status is economic, ascribed status is social.",
+      "optionD": "Achieved status is individual, ascribed status is collective.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 26,
+      "questionContent": "Match the following events to the correct option:\nList A\nList B\na) White Revolution i. Transfer of public assets to private ownership\nb) Liberalization ii. Policy changes for opening the economy\nc) Privatization iii. Growth of cities and urban areas\nd) Urbanization iv. Increase in milk production",
+      "optionA": "a)-ii, b)-iii, c)-iv, d)-i",
+      "optionB": "a)-iv, b)-i, c)-iii, d)-ii",
+      "optionC": "a)-ii, b)-i, c)-iv, d)-iii",
+      "optionD": "a)-iv, b)-ii, c)-i, d)-iii",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 27,
+      "questionContent": "Who is the author of Homo Hierarchicus: The Caste System and Its Implications (1966)?",
+      "optionA": "M.N. Srinivas",
+      "optionB": "Andre Beteille",
+      "optionC": "Louis Dumont",
+      "optionD": "Iravati Karve",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 28,
+      "questionContent": "Which of the following is considered as women's property according to the Hindu Law?",
+      "optionA": "Stridhan",
+      "optionB": "Dowry",
+      "optionC": "Devadasi",
+      "optionD": "Mehar",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 29,
+      "questionContent": "What is the primary focus of India's \"Mission LiFE\" initiative?",
+      "optionA": "Digital literacy",
+      "optionB": "Nuclear energy development",
+      "optionC": "Space exploration",
+      "optionD": "Environmental sustainability",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 30,
+      "questionContent": "Which of the following is a major economic activity in the hill regions of Northeast India?",
+      "optionA": "Industrial manufacturing",
+      "optionB": "Shifting cultivation (Jhum cultivation)",
+      "optionC": "Software development",
+      "optionD": "Maritime trade",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 31,
+      "questionContent": "The concept of \"gender\" denotes:",
+      "optionA": "The biological differences between the male and the female.",
+      "optionB": "The history of women's rights movement.",
+      "optionC": "The social construction of sex-based roles.",
+      "optionD": "The impact of globalization on the economy.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 32,
+      "questionContent": "What does communalism mean?",
+      "optionA": "The division of society based on religious identities.",
+      "optionB": "The promotion of secular values.",
+      "optionC": "The strengthening of social solidarity.",
+      "optionD": "The integration of different cultural groups.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 33,
+      "questionContent": "Which of the following is an example of a \"cross-cousin\" marriage?",
+      "optionA": "Marriage to your father's brother's daughter.",
+      "optionB": "Marriage to your mother's sister's daughter.",
+      "optionC": "Marriage to your father's sister's child.",
+      "optionD": "Marriage to your sibling's child.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 34,
+      "questionContent": "According to Karl Marx, \"surplus value\" is:",
+      "optionA": "The profit earned by capitalists.",
+      "optionB": "The wages paid to workers.",
+      "optionC": "The value of raw materials.",
+      "optionD": "The total value of goods produced.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 35,
+      "questionContent": "The term \"conjugal family\" refers to:",
+      "optionA": "A family based on blood relations.",
+      "optionB": "A family based on marital relations.",
+      "optionC": "An extended family with multiple generations.",
+      "optionD": "A family formed through adoption.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 36,
+      "questionContent": "Talcott Parsons' \"pattern variables\" are designed to:",
+      "optionA": "Explain the dynamics of class conflict.",
+      "optionB": "Explain the patterns of wealth distribution between the core and the periphery.",
+      "optionC": "Describe the choices individuals make in social interactions.",
+      "optionD": "Understand the process of rationalization.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 37,
+      "questionContent": "The concept of fictive kinship refers to:",
+      "optionA": "Kinship ties based on biological descent.",
+      "optionB": "Kinship ties that are recognized only in certain cultures.",
+      "optionC": "Kinship ties that are not based on blood or marriage, but on social bonds.",
+      "optionD": "Kinship ties established through marriage.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 38,
+      "questionContent": "What is Jajmani system?",
+      "optionA": "The system of land ownership in India.",
+      "optionB": "The traditional system of occupational service relationships in villages.",
+      "optionC": "The organization of religious rituals in India.",
+      "optionD": "The structure of urban markets in India.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 39,
+      "questionContent": "What is the main focus of \"Dalit studies\" in Indian sociology?",
+      "optionA": "The analysis of the experiences and struggles of marginalised groups, namely Dalits, tribals, religious minorities, and women from excluded groups.",
+      "optionB": "The study of landless class and bonded labour in colonial India.",
+      "optionC": "The examination of economic policies and its impact post 1991.",
+      "optionD": "The study of religious rituals among the minorities.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 40,
+      "questionContent": "The National Family Health Survey (NFHS) provides data on:",
+      "optionA": "Migration patterns in the region.",
+      "optionB": "Demographic and health indicators on fertility.",
+      "optionC": "Political and economic participation of women.",
+      "optionD": "Distribution of welfare schemes related to mental health.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 41,
+      "questionContent": "The concept of \"informal sector\" in India's economy refers to:",
+      "optionA": "Large-scale industrial enterprises.",
+      "optionB": "Voluntary activities of non-governmental civic bodies.",
+      "optionC": "Government-owned corporations.",
+      "optionD": "Unregulated and unregistered economic activities.",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 42,
+      "questionContent": "The concept of Sixth Schedule of the Indian Constitution is related to:",
+      "optionA": "Measures of autonomy and self-governance in tribal regions of Northeast India.",
+      "optionB": "Emergency Provisions to address resource allocation.",
+      "optionC": "Fundamental Rights of the Scheduled Tribes.",
+      "optionD": "Provision for establishing secular laws.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 43,
+      "questionContent": "The study of \"language revitalization\" efforts in Northeast India requires an understanding of:",
+      "optionA": "The complete rejection of modern technology.",
+      "optionB": "The role of community-based initiatives and digital resources.",
+      "optionC": "Disregarding the spoken language of the region.",
+      "optionD": "The complete dependency on government support.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 44,
+      "questionContent": "What is the aim of the \"Ayushman Bharat Digital Mission (ABDM)\"?",
+      "optionA": "To provide free internet access",
+      "optionB": "To promote digital payments",
+      "optionC": "To create an integrated digital health ecosystem",
+      "optionD": "To enhance cyber security",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 45,
+      "questionContent": "Match the campaign to the objectives:\nList A\nList B\na) Swachh Bharat Abhiyan i. Improve digital infrastructure\nb) Digital India ii. Solid Waste Management\nc) Make in India iii. Develop productive workforce for economic growth\nd) Skill India iv. Domestic manufacturing promotion",
+      "optionA": "a)-iv, b)-i, c)-ii, d)-iii",
+      "optionB": "a)-ii, b)-i, c)-iv, d)-iii",
+      "optionC": "a)-iii, b)-i, c)-iv, d)-ii",
+      "optionD": "a)-ii, b)-iv, c)-iii, d)-i",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 46,
+      "questionContent": "Who is the author of Modernization of Indian Tradition?",
+      "optionA": "B. R. Ambedkar",
+      "optionB": "M.K. Gandhi",
+      "optionC": "Yogendra Singh",
+      "optionD": "A.M. Shah",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 47,
+      "questionContent": "The study of \"little traditions\" and \"great traditions\" in India is associated with:",
+      "optionA": "Robert Redfield",
+      "optionB": "S.C. Dube",
+      "optionC": "Uma Chakravarty",
+      "optionD": "D.P. Mukherjee",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 48,
+      "questionContent": "The concept of \"reflexivity\" in sociology refers to:\nThe ability of social actors to reflect on and modify their own actions.",
+      "optionA": "The ability of social actors to reflect on and modify their own actions.",
+      "optionB": "The tendency of social structures to reproduce themselves.",
+      "optionC": "The use of quantitative methods in sociological research.",
+      "optionD": "The study of social norms and values.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 49,
+      "questionContent": "The field of Subaltern studies focuses on:",
+      "optionA": "The history of elite groups.",
+      "optionB": "The experiences of marginalized and subordinate groups.",
+      "optionC": "The role of the state in social development.",
+      "optionD": "The impact of globalization on urban slums.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 50,
+      "questionContent": "Which of the following explains the concept of \"development-induced displacement\" in India?",
+      "optionA": "The forced relocation of communities due to development projects.",
+      "optionB": "The contestation of land ownership rights based on customary laws.",
+      "optionC": "The migration of people from rural to urban areas due to natural disasters.",
+      "optionD": "The decline of traditional occupations in developed areas.",
+      "answer": "A"
+    }
+  ]
+}
