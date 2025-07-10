@@ -1,4 +1,3 @@
-// change subjectName = "Subject"
 document.addEventListener('DOMContentLoaded', () => {
     const currentQuestionNumberSpan = document.getElementById('current-question-number');
     const totalQuestionsSpan = document.getElementById('total-questions');
@@ -7,12 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizContent = document.getElementById('quiz-content');
     const prevQuestionBtn = document.getElementById('prev-question-btn');
     const nextQuestionBtn = document.getElementById('next-question-btn');
-
-    // updating subject throughout dynamically
-    const subjectName = "B.Ed.";
-    document.title = `TUEE ${subjectName}`;
-    const subject = document.getElementById("subject-display-name"); // Renamed for clarity
-    subject.textContent = subjectName;
 
     // Elements for Question Status Modal
     const reviewQuizBtn = document.getElementById('review-quiz-btn');
@@ -25,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuestionIndex = 0;
     let score = 0;
     let timerInterval;
-    // Removed TOTAL_QUIZ_TIME_SECONDS as there is no time limit
     const MARKS_PER_QUESTION = 2; // Marks for each correct answer
 
     let timeElapsed = 0; // Initialize timeElapsed to 0
