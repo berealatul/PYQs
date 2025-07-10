@@ -61,9 +61,7 @@
         </button>
       </div>
 
-      <p class="mt-8 text-sm text-gray-500">
-        To contribute use UPI ID: <b>a2ul@icici</b>
-      </p>
+      <p class="mt-8 text-sm text-gray-500">Dedicated to Sweta!</p>
     </div>
 
     <script>
@@ -74,7 +72,7 @@
         const container = document.getElementById("paper-selection-container");
 
         // updating subject throughout dynamically
-        const subjectName = "B.Ed.";
+        const subjectName = "B.Ed."; // This will be dynamic based on the URL in a full app
         document.title = `TUEE ${subjectName}`;
         const subject = document.getElementById("subject-display-name"); // Renamed for clarity
         subject.textContent = subjectName;
@@ -120,19 +118,34 @@
         // Populate Medium Dropdown
         const mediums = await loadJson("supportedMedium.json");
         if (mediums) {
+          // Clear existing options first to ensure default is set correctly
+          mediumSelect.innerHTML = "";
+
+          // Add a default "Select Medium" option
           const defaultMediumOption = document.createElement("option");
           defaultMediumOption.value = "";
           defaultMediumOption.textContent = "Select Medium";
           defaultMediumOption.disabled = true;
-          defaultMediumOption.selected = true;
           mediumSelect.appendChild(defaultMediumOption);
+
+          let englishOptionAddedAndSelected = false; // Flag to track if English is found and selected
 
           mediums.forEach((medium) => {
             const option = document.createElement("option");
             option.value = medium.value;
             option.textContent = medium.name;
+            if (medium.value === "E") {
+              // Set English as default
+              option.selected = true;
+              englishOptionAddedAndSelected = true;
+            }
             mediumSelect.appendChild(option);
           });
+
+          // If English was not found or not explicitly set as selected, ensure "Select Medium" is selected
+          if (!englishOptionAddedAndSelected) {
+            defaultMediumOption.selected = true;
+          }
         } else {
           mediumSelect.innerHTML =
             '<option value="">Error loading mediums</option>';
