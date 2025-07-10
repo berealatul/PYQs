@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevQuestionBtn = document.getElementById('prev-question-btn');
     const nextQuestionBtn = document.getElementById('next-question-btn');
 
+    // updating subject throughout dynamically
+    const subjectName = "B.Ed.";
+    document.title = `TUEE ${subjectName}`;
+    const subject = document.getElementById("subject-display-name"); // Renamed for clarity
+    subject.textContent = subjectName;
+
     // Elements for Question Status Modal
     const reviewQuizBtn = document.getElementById('review-quiz-btn');
     const questionStatusModal = document.getElementById('question-status-modal');
