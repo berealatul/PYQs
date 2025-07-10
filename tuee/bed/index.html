@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TUEE B.Ed.</title>
+    <title>TUEE [SUBJECT_NAME]</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -20,7 +20,7 @@
       class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-gray-200"
     >
       <h1 class="text-4xl font-extrabold text-gray-800 mb-6 tracking-tight">
-        TUEE B.Ed.
+        TUEE <span id="subject-display-name">[SUBJECT_NAME]</span>
       </h1>
       <p class="text-gray-600 mb-8 text-lg">
         Choose year and medium for question paper
@@ -61,7 +61,9 @@
         </button>
       </div>
 
-      <p class="mt-8 text-sm text-gray-500">Dedicated to Sweta!</p>
+      <p class="mt-8 text-sm text-gray-500">
+        To contribute use UPI ID: <b>a2ul@icici</b>
+      </p>
     </div>
 
     <script>
@@ -70,6 +72,12 @@
         const mediumSelect = document.getElementById("medium-select");
         const startQuizButton = document.getElementById("start-quiz-button");
         const container = document.getElementById("paper-selection-container");
+
+        // updating subject throughout dynamically
+        const subjectName = "B.Ed.";
+        document.title = `TUEE ${subjectName}`;
+        const subject = document.getElementById("subject-display-name"); // Renamed for clarity
+        subject.textContent = subjectName;
 
         // Function to load JSON data
         async function loadJson(filePath) {

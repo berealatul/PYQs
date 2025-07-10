@@ -1,3 +1,4 @@
+// change subjectName = "Subject"
 document.addEventListener('DOMContentLoaded', () => {
     const currentQuestionNumberSpan = document.getElementById('current-question-number');
     const totalQuestionsSpan = document.getElementById('total-questions');
@@ -6,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizContent = document.getElementById('quiz-content');
     const prevQuestionBtn = document.getElementById('prev-question-btn');
     const nextQuestionBtn = document.getElementById('next-question-btn');
-    const quizEndModal = document.getElementById('quiz-end-modal');
-    const finalScoreSpan = document.getElementById('final-score');
-    const restartQuizBtn = document.getElementById('restart-quiz-btn');
-    const backToSelectionBtn = document.getElementById('back-to-selection-btn');
 
-    // New elements for Question Status Modal
+    // updating subject throughout dynamically
+    const subjectName = "B.Ed.";
+    document.title = `TUEE ${subjectName}`;
+    const subject = document.getElementById("subject-display-name"); // Renamed for clarity
+    subject.textContent = subjectName;
+
+    // Elements for Question Status Modal
     const reviewQuizBtn = document.getElementById('review-quiz-btn');
     const questionStatusModal = document.getElementById('question-status-modal');
     const questionStatusGrid = document.getElementById('question-status-grid');
@@ -22,10 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentQuestionIndex = 0;
     let score = 0;
     let timerInterval;
-    const TOTAL_QUIZ_TIME_SECONDS = 2 * 60 * 60; // 2 hours in seconds
+    // Removed TOTAL_QUIZ_TIME_SECONDS as there is no time limit
     const MARKS_PER_QUESTION = 2; // Marks for each correct answer
 
-    let timeLeft = TOTAL_QUIZ_TIME_SECONDS; // Initialize with total quiz time
+    let timeElapsed = 0; // Initialize timeElapsed to 0
 
     // Store user's selected answers and whether they got it right
     // isCorrect will be:
@@ -113,10 +116,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function initializeQuiz() {
         currentQuestionIndex = 0;
         score = 0;
+        timeElapsed = 0; // Reset time elapsed for restart
         userAnswers = Array(questions.length).fill(null).map(() => ({ selectedOption: null, isCorrect: null })); // Initialize with null for both
         scoreSpan.textContent = score;
         displayQuestion();
-        startGlobalTimer();
+        startGlobalTimer(); // Start the global timer
         updateNavigationButtons();
         updateQuestionStatusDisplay(); // Initialize status display
     }
@@ -269,35 +273,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Starts the global timer for the entire quiz.
+     * Starts the global timer to display time elapsed.
      */
     function startGlobalTimer() {
         clearInterval(timerInterval); // Clear any existing timer
-        // timeLeft is already initialized with TOTAL_QUIZ_TIME_SECONDS
-        updateTimerDisplay();
+        timeElapsed = 0; // Reset time elapsed
+        updateTimerDisplay(); // Display 00:00:00 initially
 
         timerInterval = setInterval(() => {
-            timeLeft--;
+            timeElapsed++; // Increment time elapsed
             updateTimerDisplay();
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                endQuiz(); // Call endQuiz when time runs out
-            }
+            // No endQuiz() call here, timer runs indefinitely
         }, 1000);
     }
 
     /**
-     * Updates the timer display.
+     * Updates the timer display to show time elapsed.
      */
     function updateTimerDisplay() {
-        const hours = Math.floor(timeLeft / 3600);
-        const minutes = Math.floor((timeLeft % 3600) / 60);
-        const seconds = timeLeft % 60;
+        const hours = Math.floor(timeElapsed / 3600);
+        const minutes = Math.floor((timeElapsed % 3600) / 60);
+        const seconds = timeElapsed % 60;
         timerSpan.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
     }
 
     /**
-     * Ends the quiz and shows the final score modal.
+     * This function is now only called when all questions are navigated through.
+     * It no longer handles time-based quiz ending.
      */
     function endQuiz() {
         clearInterval(timerInterval); // Ensure timer stops
@@ -309,9 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         prevQuestionBtn.disabled = true;
         nextQuestionBtn.disabled = true;
-        reviewQuizBtn.disabled = true; // Disable review button when quiz ends
-
-        showQuizEndModal();
+        // reviewQuizBtn is NOT disabled here, as per new requirement
     }
 
     /**
@@ -321,11 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
         prevQuestionBtn.disabled = (currentQuestionIndex === 0);
         nextQuestionBtn.disabled = (currentQuestionIndex === questions.length - 1);
 
-        // If quiz has ended due to time, all buttons should be disabled.
-        if (timeLeft <= 0) {
-            prevQuestionBtn.disabled = true;
-            nextQuestionBtn.disabled = true;
-        }
+        // reviewQuizBtn is NOT disabled here, as per new requirement
     }
 
     /**
@@ -341,48 +337,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Navigates to the next question or ends the quiz.
+     * Navigates to the next question or "ends" the quiz (by reaching the last question).
      */
     nextQuestionBtn.addEventListener('click', () => {
-        // If the current question has not been answered (isCorrect is null),
-        // we do NOT mark it as incorrect. It remains in a 'skipped' state.
-        // The scoring logic only counts questions where isCorrect is true.
-        // So, skipped questions (isCorrect: null) will not affect the score.
-
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
             displayQuestion();
-            // The global timer continues, no need to restart per question.
             updateNavigationButtons();
             updateQuestionStatusDisplay(); // Keep status updated on navigation
         } else {
-            // Quiz ends when all questions are navigated through
-            endQuiz(); // This will show the modal and stop the timer
+            // Quiz "ends" when all questions are navigated through
+            endQuiz(); // This will stop the timer and disable navigation buttons
         }
-    });
-
-    /**
-     * Displays the quiz end modal with the final score.
-     */
-    function showQuizEndModal() {
-        finalScoreSpan.textContent = score;
-        quizEndModal.classList.remove('hidden');
-    }
-
-    /**
-     * Restarts the quiz from the beginning.
-     */
-    restartQuizBtn.addEventListener('click', () => {
-        quizEndModal.classList.add('hidden');
-        timeLeft = TOTAL_QUIZ_TIME_SECONDS; // Reset timer for restart
-        initializeQuiz();
-    });
-
-    /**
-     * Navigates back to the programme selection page.
-     */
-    backToSelectionBtn.addEventListener('click', () => {
-        window.location.href = './index.html'; // Go back to TUEE/bed/index.html
     });
 
     // --- Question Status Modal Logic ---
