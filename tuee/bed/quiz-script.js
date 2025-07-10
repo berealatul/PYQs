@@ -11,18 +11,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const restartQuizBtn = document.getElementById('restart-quiz-btn');
     const backToSelectionBtn = document.getElementById('back-to-selection-btn');
 
+    // New elements for Question Status Modal
+    const reviewQuizBtn = document.getElementById('review-quiz-btn');
+    const questionStatusModal = document.getElementById('question-status-modal');
+    const questionStatusGrid = document.getElementById('question-status-grid');
+    const closeStatusModalBtn = document.getElementById('close-status-modal-btn');
+
+
     let questions = [];
     let currentQuestionIndex = 0;
     let score = 0;
     let timerInterval;
-    // Changed from TIME_PER_QUESTION_SECONDS to TOTAL_QUIZ_TIME_SECONDS
     const TOTAL_QUIZ_TIME_SECONDS = 2 * 60 * 60; // 2 hours in seconds
     const MARKS_PER_QUESTION = 2; // Marks for each correct answer
 
     let timeLeft = TOTAL_QUIZ_TIME_SECONDS; // Initialize with total quiz time
 
     // Store user's selected answers and whether they got it right
-    let userAnswers = []; // Array of objects: { selectedOption: 'A', isCorrect: true/false }
+    // isCorrect will be:
+    // - true: Correctly answered
+    // - false: Incorrectly answered
+    // - null: Skipped or not yet submitted
+    let userAnswers = []; // Array of objects: { selectedOption: 'A', isCorrect: true/false/null }
 
     /**
      * Parses URL parameters to get the selected year and medium.
@@ -51,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Disable buttons if no questions are loaded
             prevQuestionBtn.disabled = true;
             nextQuestionBtn.disabled = true;
+            reviewQuizBtn.disabled = true; // Disable review button
             return;
         }
 
@@ -74,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Disable buttons if no questions are loaded
                 prevQuestionBtn.disabled = true;
                 nextQuestionBtn.disabled = true;
+                reviewQuizBtn.disabled = true; // Disable review button
                 return;
             }
             console.log(`Loaded ${questions.length} questions from ${filePath}.`);
@@ -91,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Disable buttons on error
             prevQuestionBtn.disabled = true;
             nextQuestionBtn.disabled = true;
+            reviewQuizBtn.disabled = true; // Disable review button
         }
     }
 
@@ -100,12 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function initializeQuiz() {
         currentQuestionIndex = 0;
         score = 0;
-        userAnswers = Array(questions.length).fill(null); // Initialize user answers array
+        userAnswers = Array(questions.length).fill(null).map(() => ({ selectedOption: null, isCorrect: null })); // Initialize with null for both
         scoreSpan.textContent = score;
         displayQuestion();
-        // Start the global timer only once when the quiz initializes
         startGlobalTimer();
         updateNavigationButtons();
+        updateQuestionStatusDisplay(); // Initialize status display
     }
 
     /**
@@ -151,34 +164,42 @@ document.addEventListener('DOMContentLoaded', () => {
         const submitAnswerBtn = quizContent.querySelector('.submit-answer-btn');
         const feedbackMessage = quizContent.querySelector('.feedback-message');
 
-        // Restore previous selection if exists
-        const previousAnswer = userAnswers[currentQuestionIndex];
-        if (previousAnswer) {
-            const selectedOptionElement = optionsList.querySelector(`[data-option="${previousAnswer.selectedOption}"]`);
+        // Restore previous state if exists
+        const previousAnswerState = userAnswers[currentQuestionIndex];
+
+        // If an option was previously selected (even if not submitted)
+        if (previousAnswerState && previousAnswerState.selectedOption) {
+            const selectedOptionElement = optionsList.querySelector(`[data-option="${previousAnswerState.selectedOption}"]`);
             if (selectedOptionElement) {
                 selectedOptionElement.classList.add('option-selected');
             }
-            // If already answered, show feedback and disable options
-            if (previousAnswer.isCorrect !== null) { // Means it was submitted
-                revealAnswer(question.answer, previousAnswer.selectedOption);
-                submitAnswerBtn.disabled = true;
-                optionsList.classList.add('options-disabled');
-                feedbackMessage.classList.remove('hidden');
-                feedbackMessage.textContent = previousAnswer.isCorrect ? 'Correct!' : 'Incorrect!';
-                feedbackMessage.classList.add(previousAnswer.isCorrect ? 'text-green-700' : 'text-red-700');
-            }
         }
+
+        // If the question was already submitted (isCorrect is true or false)
+        if (previousAnswerState && previousAnswerState.isCorrect !== null) {
+            revealAnswer(question.answer, previousAnswerState.selectedOption);
+            submitAnswerBtn.disabled = true;
+            optionsList.classList.add('options-disabled');
+            feedbackMessage.classList.remove('hidden');
+            feedbackMessage.textContent = previousAnswerState.isCorrect ? 'Correct!' : 'Incorrect!';
+            feedbackMessage.classList.add(previousAnswerState.isCorrect ? 'text-green-700' : 'text-red-700');
+        } else {
+            // If not submitted, ensure submit button is enabled and options are clickable
+            submitAnswerBtn.disabled = false;
+            optionsList.classList.remove('options-disabled');
+            feedbackMessage.classList.add('hidden'); // Hide feedback for a fresh or skipped question
+        }
+
 
         // Add event listeners for options
         optionsList.querySelectorAll('.option-item').forEach(optionElement => {
             optionElement.addEventListener('click', () => {
-                // Only allow selection if not already answered
-                // Check if the current question's answer has NOT been submitted yet (isCorrect is null)
-                if (!userAnswers[currentQuestionIndex] || userAnswers[currentQuestionIndex].isCorrect === null) {
+                // Only allow selection if the question has not been submitted yet
+                if (userAnswers[currentQuestionIndex].isCorrect === null) {
                     optionsList.querySelectorAll('.option-item').forEach(opt => opt.classList.remove('option-selected'));
                     optionElement.classList.add('option-selected');
                     // Store the selected option, but mark isCorrect as null until submitted
-                    userAnswers[currentQuestionIndex] = { selectedOption: optionElement.dataset.option, isCorrect: null };
+                    userAnswers[currentQuestionIndex].selectedOption = optionElement.dataset.option;
                 }
             });
         });
@@ -190,6 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 checkAnswer(question.answer, selectedOption);
                 submitAnswerBtn.disabled = true; // Disable after submission
                 optionsList.classList.add('options-disabled'); // Disable further clicks on options
+                updateQuestionStatusDisplay(); // Update status after answer submission
             } else {
                 feedbackMessage.classList.remove('hidden');
                 feedbackMessage.textContent = 'Please select an option first!';
@@ -287,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         prevQuestionBtn.disabled = true;
         nextQuestionBtn.disabled = true;
+        reviewQuizBtn.disabled = true; // Disable review button when quiz ends
 
         showQuizEndModal();
     }
@@ -295,8 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
      * Updates the enabled/disabled state of navigation buttons.
      */
     function updateNavigationButtons() {
-        // Navigation buttons are primarily for moving between questions.
-        // Their state depends on currentQuestionIndex, not the global timer.
         prevQuestionBtn.disabled = (currentQuestionIndex === 0);
         nextQuestionBtn.disabled = (currentQuestionIndex === questions.length - 1);
 
@@ -315,6 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentQuestionIndex--;
             displayQuestion();
             updateNavigationButtons();
+            updateQuestionStatusDisplay(); // Keep status updated on navigation
         }
     });
 
@@ -322,20 +344,20 @@ document.addEventListener('DOMContentLoaded', () => {
      * Navigates to the next question or ends the quiz.
      */
     nextQuestionBtn.addEventListener('click', () => {
-        // Ensure current question is marked as answered (even if time ran out or skipped)
-        if (!userAnswers[currentQuestionIndex]) {
-            userAnswers[currentQuestionIndex] = { selectedOption: null, isCorrect: false }; // Mark as unanswered/incorrect
-        } else if (userAnswers[currentQuestionIndex].isCorrect === null) {
-            userAnswers[currentQuestionIndex].isCorrect = false; // Mark as incorrect if not submitted
-        }
+        // If the current question has not been answered (isCorrect is null),
+        // we do NOT mark it as incorrect. It remains in a 'skipped' state.
+        // The scoring logic only counts questions where isCorrect is true.
+        // So, skipped questions (isCorrect: null) will not affect the score.
 
         if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
             displayQuestion();
+            // The global timer continues, no need to restart per question.
             updateNavigationButtons();
+            updateQuestionStatusDisplay(); // Keep status updated on navigation
         } else {
             // Quiz ends when all questions are navigated through
-            endQuiz();
+            endQuiz(); // This will show the modal and stop the timer
         }
     });
 
@@ -361,6 +383,61 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     backToSelectionBtn.addEventListener('click', () => {
         window.location.href = './index.html'; // Go back to TUEE/bed/index.html
+    });
+
+    // --- Question Status Modal Logic ---
+
+    /**
+     * Updates the display of question status in the modal grid.
+     */
+    function updateQuestionStatusDisplay() {
+        questionStatusGrid.innerHTML = ''; // Clear previous grid
+        questions.forEach((q, index) => {
+            const statusItem = document.createElement('div');
+            statusItem.classList.add(
+                'question-status-item',
+                'p-2', 'rounded-md', 'shadow-sm', 'border', 'border-gray-300',
+                'transition', 'duration-150', 'ease-in-out'
+            );
+            statusItem.textContent = index + 1; // Display question number
+
+            // Apply color based on answer status
+            const answerState = userAnswers[index];
+            if (answerState && answerState.isCorrect === true) {
+                statusItem.classList.add('bg-green-200', 'text-green-800'); // Green for correct
+            } else if (answerState && answerState.isCorrect === false) {
+                statusItem.classList.add('bg-red-200', 'text-red-800'); // Red for incorrect
+            } else {
+                statusItem.classList.add('bg-white', 'text-gray-800'); // White for not attempted/skipped
+            }
+
+            // Highlight current question in the status grid
+            if (index === currentQuestionIndex) {
+                 statusItem.classList.add('ring-2', 'ring-indigo-500', 'ring-offset-2');
+            }
+
+            // Add click listener to navigate to the question
+            statusItem.addEventListener('click', () => {
+                currentQuestionIndex = index;
+                displayQuestion();
+                updateNavigationButtons();
+                questionStatusModal.classList.add('hidden'); // Close modal after navigating
+                updateQuestionStatusDisplay(); // Update highlight for new current question
+            });
+
+            questionStatusGrid.appendChild(statusItem);
+        });
+    }
+
+    // Event listener to open the status modal
+    reviewQuizBtn.addEventListener('click', () => {
+        updateQuestionStatusDisplay(); // Ensure status is up-to-date before opening
+        questionStatusModal.classList.remove('hidden');
+    });
+
+    // Event listener to close the status modal
+    closeStatusModalBtn.addEventListener('click', () => {
+        questionStatusModal.classList.add('hidden');
     });
 
     // Initial load of questions
