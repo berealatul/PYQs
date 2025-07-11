@@ -1,10 +1,4 @@
 [
-  {
-    "name": "Hindi",
-    "value": "H"
-  },
-  {
-    "name": "English",
-    "value": "E"
-  }
+  {"name": "Hindi", "value": "H"},
+  {"name": "English","value": "E"}
 ]

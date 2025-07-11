@@ -134,23 +134,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = questions[currentQuestionIndex];
         currentQuestionNumberSpan.textContent = currentQuestionIndex + 1;
 
+        // Parse Markdown content for question and options
+        const parsedQuestionContent = marked.parse(question.questionContent);
+        const parsedOptionA = marked.parse(question.optionA);
+        const parsedOptionB = marked.parse(question.optionB);
+        const parsedOptionC = marked.parse(question.optionC);
+        const parsedOptionD = marked.parse(question.optionD);
+
+
         quizContent.innerHTML = `
             <div class="question-card bg-white p-6 rounded-xl shadow-md border border-gray-200 mb-6">
                 <h3 class="text-xl font-semibold text-gray-800 mb-4 leading-relaxed">
-                    ${question.questionNumber ? `Q${question.questionNumber}. ` : ''}${question.questionContent}
+                    ${question.questionNumber ? `Q${question.questionNumber}. ` : ''}${parsedQuestionContent}
                 </h3>
                 <ul class="space-y-3 text-gray-700" id="options-list">
                     <li class="option-item p-3 border border-gray-200 rounded-md bg-gray-50 cursor-pointer hover:bg-gray-100 transition duration-150 ease-in-out" data-option="A">
-                        <strong>A)</strong> ${question.optionA}
+                        <strong>A)</strong> ${parsedOptionA}
                     </li>
                     <li class="option-item p-3 border border-gray-200 rounded-md bg-gray-50 cursor-pointer hover:bg-gray-100 transition duration-150 ease-in-out" data-option="B">
-                        <strong>B)</strong> ${question.optionB}
+                        <strong>B)</strong> ${parsedOptionB}
                     </li>
                     <li class="option-item p-3 border border-gray-200 rounded-md bg-gray-50 cursor-pointer hover:bg-gray-100 transition duration-150 ease-in-out" data-option="C">
-                        <strong>C)</strong> ${question.optionC}
+                        <strong>C)</strong> ${parsedOptionC}
                     </li>
                     <li class="option-item p-3 border border-gray-200 rounded-md bg-gray-50 cursor-pointer hover:bg-gray-100 transition duration-150 ease-in-out" data-option="D">
-                        <strong>D)</strong> ${question.optionD}
+                        <strong>D)</strong> ${parsedOptionD}
                     </li>
                 </ul>
                 <div class="mt-6 text-center">
@@ -221,6 +229,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 feedbackMessage.classList.add('text-yellow-700');
             }
         });
+
+        // After content is loaded and rendered, typeset MathJax
+        MathJax.typesetPromise();
     }
 
     /**
