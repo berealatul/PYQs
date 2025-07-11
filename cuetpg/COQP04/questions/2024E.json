@@ -1,0 +1,679 @@
+{
+  "questions": [
+    {
+      "questionNumber": 1,
+      "questionContent": "Gross Primary Deficit can be calculated by which of the following equation?",
+      "optionA": "Net borrowings at home +Borrowing from RBI +Borrowing from abroad-Net Interest liabilities",
+      "optionB": "Net borrowings at home +Borrowing from RBI+Borrowing from abroad-Net Interest liabilities",
+      "optionC": "Total expenditure-(revenue receipts+Non debt creating capital receipts)",
+      "optionD": "Net borrowings at home +Borrowing from RBI-Borrowing from abroad-Net Interest liabilities",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 2,
+      "questionContent": "Aggregate demand for final goods in a three sector model consists of which of the following?",
+      "optionA": "ex ante consumption.ex ante investment only",
+      "optionB": "ex ante investment,expost consumption.government spending etc.",
+      "optionC": "ex ante consumption.expost investment.government spending etc.",
+      "optionD": "ex ante consumption.ex ante investment.government spending etc.",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 3,
+      "questionContent": "Demonetisation was a new intiative taken by Government of India. Arrange following in proper sequence/chronology:\n\n(A). Demonetisation was announced in November 2016\n(B). To tackle the problem of of corruption, black money terrorism and circulation of fake currency\n(C). New currency notes in the denomination of Rs 500 and Rs2,000 were launched\n(D). Old currency notes of Rs.500 and Rs.1,000 were no longer legal tender\n\nChoose the correct answer from the options given below:",
+      "optionA": "(B), (A), (D), (C)",
+      "optionB": "(A), (B), (C), (D)",
+      "optionC": "(B), (D), (C), (A)",
+      "optionD": "(C), (B), (D), (A)",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 4,
+      "questionContent": "RBI publishes figures for alternative measures of money supply. They are defined as:\n(A) $M1=CU+DD$\n(B) $M2=M1$ + Savings deposits with Post office, savings banks\n(C) $M4=M3$+ Total deposits with Post savings organisations (excluding National Savings Certificates)\n(D) $M4=M3$+ Total deposits with Post savings organisations (including National Savings Certificates)\n\nChoose the correct answer from the options given below:",
+      "optionA": "(B) and (C) only.",
+      "optionB": "(A) (B) and (D) only.",
+      "optionC": "(A), (B) and (C) only",
+      "optionD": "(A) and (D) only.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 5,
+      "questionContent": "Which of the following is not the feature of Indifference Curve.",
+      "optionA": "Two indifference curves never intersect each other.",
+      "optionB": "Lower Indifference curve gives greater level of utility.",
+      "optionC": "Indifference curve slopes downwards from left to right.",
+      "optionD": "Higher Indifference curve gives greater level of utility.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 6,
+      "questionContent": "Match List-I with List-II\n\n| LIST I                                     | LIST II                                  |\n| :----------------------------------------- | :--------------------------------------- |\n| A. Equilibirum of a monoply firm is        | I. leads to an excess supply             |\n| B. Demand curve faced by the firm under monopolistic competition | II. $MR=MC$ and MC is rising             |\n| C. Imposition of price ceiling below the equilibirum price | III. is not perfectly elastic            |\n| D. Imposition of price floor above the equilibirum price | IV. leads to an excess demand            |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(II),(B)-(II),(C)-(I),(D)-(IV)$",
+      "optionB": "$(A)-(II),(B)-(III),(C)-(IV),(D)-(I)$",
+      "optionC": "$(A)-(III),(B)-(II),(C)-(IV),(D)-(I)$",
+      "optionD": "$(A)-(III),(C)-(I),(D)-(II)$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 7,
+      "questionContent": "Negative slope of the demand can be explained in terms of that come into play when the price of a commodity changes.",
+      "optionA": "Marginal effect",
+      "optionB": "Income effect only",
+      "optionC": "Substitution effect only",
+      "optionD": "Substitution effect and Income effect",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 8,
+      "questionContent": "Select incorrect statements regarding Infrastructure:\n(A). Network of physical facilities and public services and with this social infrastructure is equally important to support it\n(B). Transportation and communication are included in infrastructure\n(C). Network of physical facilities only\n(D).Needs to be upgraded from time to time to maintain high economic growth rate\n\nChoose the correct answer from the options given below:",
+      "optionA": "(C) only.",
+      "optionB": "(B) and (D) only.",
+      "optionC": "(A), and (D) only",
+      "optionD": "(A) only.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 9,
+      "questionContent": "Match List-I with List-II\n\n| LIST I                 | LIST II                                                                  |\n| :--------------------- | :----------------------------------------------------------------------- |\n| A. Globalisation       | I. To promote the efficiency of local industries and adoption of modern technologies |\n| B. Disinvestment       | II. Related with tax reforms                                             |\n| C. Fiscal policy       | III. Privatisation of the public sector enterprises by selling off part of the equity of PSES |\n| D. Trade and Investment Policy Reforms | IV. Outcome of the set of various policies that are aimed at transforming the World |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(I),(B)-(II),(C)-(III),(D)-(IV)$",
+      "optionB": "$(A)-(IV),(B)-(III),(C)-(II),(D)-(I)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(III)$",
+      "optionD": "$(A)-(III),(C)-(I),(D)-(II)$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 10,
+      "questionContent": "Arrange following in proper sequence in the context of Government Budget:\n(A). Capital Receipts\n(B). Total Expenditure\n(C). Non debt Receipts\n(D).Revenue deficit\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (C), (B), (D)",
+      "optionB": "(A) (B), (C), (D)",
+      "optionC": "(D), (A), (C), (B)",
+      "optionD": "(C), (B), (D), (A)",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 11,
+      "questionContent": "Calculate price elasticity of supply from the following information:\n\n| price of books       | quantity of books purchased and sold |\n| :------------------- | :----------------------------------- |\n| old price: $P=100$   | old quantity: $Q=2000$               |\n| new price $P=300$    | new quantity: $Q=10000$              |\n\n",
+      "optionA": "2",
+      "optionB": "5",
+      "optionC": "1.67",
+      "optionD": "1",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 12,
+      "questionContent": "Development that meets the need of the present generation without compromising the ability of the future generation to meet their own needs is known as:",
+      "optionA": "Inter generational development",
+      "optionB": "Future development",
+      "optionC": "Sustainable Development",
+      "optionD": "Balanced development",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 13,
+      "questionContent": "When a proportional increase in all inputs results in an increase in output by a larger proportion, the production function is said to display:",
+      "optionA": "constant returns to scale",
+      "optionB": "increasing returns to scale",
+      "optionC": "decreasing returns to scale",
+      "optionD": "producing returns to scale",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 14,
+      "questionContent": "In Harappan Civilisation evidence of ploughed field was found at",
+      "optionA": "Harappa",
+      "optionB": "Kalibangan",
+      "optionC": "Amri",
+      "optionD": "Dholavira",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 15,
+      "questionContent": "In Sangam literature the term Uzhavar was used for",
+      "optionA": "Landowner",
+      "optionB": "Village",
+      "optionC": "Ploughmen",
+      "optionD": "Landlord",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 16,
+      "questionContent": "The script used in most Asokan inscription is",
+      "optionA": "Aramaic",
+      "optionB": "Devanagari",
+      "optionC": "Brahmi",
+      "optionD": "Kharosthi",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 17,
+      "questionContent": "Earliest inscriptional evidence of land grants came from",
+      "optionA": "Satavahana Dynasty",
+      "optionB": "Gupta Dynasty",
+      "optionC": "Maurya Dynasty",
+      "optionD": "Haryanka Dynasty",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 18,
+      "questionContent": "V.S Sukthankar who prepared the critical edition of Mahabharata was a noted",
+      "optionA": "Musician",
+      "optionB": "Director",
+      "optionC": "Painter",
+      "optionD": "Sanskritist",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 19,
+      "questionContent": "Match List-I with List-II\n\n| LIST I                             | LIST II          |\n| :--------------------------------- | :--------------- |\n| A. The Peasant and the Raj         | I. S.N. Sen      |\n| B. Theories of the Indian Mutiny   | II. S.B. Choudhari |\n| C. 1857                            | III. Eric Stokes |\n| D. The Sepoy Mutiny and the Revolt of 1857 | IV. R.C.Majumdar |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(I),(B)-(II),(C)-(III),(D)-(IV)$",
+      "optionB": "$(A)-(I),(B)-(III),(C)-(II),(D)-(IV)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(III)$",
+      "optionD": "$(A)-(III),(B)-(II),(C)-(I),(D)-(IV)$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 20,
+      "questionContent": "Match List-I with List-II\n\n| LIST I (Place of Revolt of 1857) | LIST II (Leaders)    |\n| :------------------------------- | :------------------- |\n| A. Faizabad                      | I. Shah Mal          |\n| B. Barout                        | II. Maulvi Ahmadullah Shah |\n| C. Awadh                         | III. Nana Sahib      |\n| D. Kanpur                        | IV. Birjis Qadr      |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(I),(B)-(II),(C)-(III),(D)-(IV)$",
+      "optionB": "$(A)-(II),(B)-(I),(C)-(IV),(D)-(III)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(III)$",
+      "optionD": "$(A)-(III),(B)-(IV),(C)-(I),(D)-(II)$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 21,
+      "questionContent": "During Medieval period the term Pahi -Kashta was used for",
+      "optionA": "Peasants who were residents of the village in which they held their land",
+      "optionB": "Non-resident cultivators who belonged to some other village, but cultivated lands elsewhere on a contractual basis",
+      "optionC": "Artisan",
+      "optionD": "Big land owner",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 22,
+      "questionContent": "Hampi name was derived from",
+      "optionA": "Local mother goddess",
+      "optionB": "Local ruling class",
+      "optionC": "Local merchant class",
+      "optionD": "Local musician class",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 23,
+      "questionContent": "Arrange the following travellers in order of their coming to India (chronologically)\n(A).Nikitin\n(B).Duarte Barbosa\n(C).Monserrate\n(D).Peter Mandi\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B), (C), (D)",
+      "optionB": "(A), (C), (B), (D)",
+      "optionC": "(B), (A), (D), (C)",
+      "optionD": "(C), (B), (D), (A)",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 24,
+      "questionContent": "Arrange the following in chronological order\n(A).Cabinet Mission announces its constitutional scheme\n(B).Labour Goverment comes in power in Britain\n(C). Constituent Assembly begins its sessions\n(D).Congress forms Interim Government\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B), (C), (D)",
+      "optionB": "(A), (C), (B), (D)",
+      "optionC": "(B), (A), (D), (C)",
+      "optionD": "(C), (B), (D), (A)",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 25,
+      "questionContent": "Who is the author of the book 'Levaithan'?",
+      "optionA": "Hobbes",
+      "optionB": "Locke",
+      "optionC": "Rouseau",
+      "optionD": "Rawls",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 26,
+      "questionContent": "The doctrine of 'utilitarianism' and the principle of the 'maximum happiness of the maximum number of people' is associated with which political philosopher.",
+      "optionA": "James Mill",
+      "optionB": "J. S. Mill",
+      "optionC": "Jeremy Bentham",
+      "optionD": "Aristotle",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 27,
+      "questionContent": "Gabriel Almond and Sidney Verba published which book in 1963 ?",
+      "optionA": "The Civic Culture",
+      "optionB": "The Political Culture",
+      "optionC": "The Civic Virtue",
+      "optionD": "The Political Virtue",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 28,
+      "questionContent": "Who advanced the idea that advanced capitalist regimes are ruled by consent rather than by coercion",
+      "optionA": "Karl Marx",
+      "optionB": "Lenin",
+      "optionC": "Antonio Gramsci",
+      "optionD": "Mao",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 29,
+      "questionContent": "According to Jhonston, a core strategic paradigm provides answer to the following questions:\n(A). The role of war in International Relations\n(B). The nature of the adversaries and the threats they pose\n(C). The role of peace in International Relations\n(D). The utility of force\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B) and (D) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(A), (B), (C) and (D).",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 30,
+      "questionContent": "The objective of the First Five Year Plan of India (1951-1956) was\n(A). To raise the level of national income\n(B). To get the country's economy out of the cycle of poverty\n(C). To focus mainly on heavy industries\n(D). To focus mainly on the agrarian sector including investment in dams and irrigation\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B) and (C) only.",
+      "optionB": "(A), (B) and (D) only.",
+      "optionC": "(A), (B), (C) and (D).",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 31,
+      "questionContent": "Operation Flood was\n(A). the rural development programme\n(B). a dairy programme as a path to development\n(C). a poverty allviation programme\n(D). a rural employment guarantee scheme\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B) and (D) only.",
+      "optionB": "(A) (B), (C) and (D).",
+      "optionC": "(A), (B) and (C) only.",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 32,
+      "questionContent": "Who was the founder-president of Bharatiya Jana Sangh?",
+      "optionA": "Deen Dayal Upadhyaya",
+      "optionB": "Shyama Prasad Mukherjee",
+      "optionC": "C. Rajagopalachari",
+      "optionD": "A. K. Gopalan",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 33,
+      "questionContent": "Match List I with List II\n\n| LIST I (Ideas/Associations/Individual, etc.) | LIST II (Events/Principles/Contributions, etc.)                                |\n| :------------------------------------------- | :----------------------------------------------------------------------------- |\n| A Panchsheel                                 | I Preservation of territorial integrity, sovereignty and economic development  |\n| B Bandung Conference                         | II Five principles of peaceful coexistence                                     |\n| C Dalai Lama                                 | III Led to the establishment of NAM                                            |\n| D India's Foreign Policy in the period 1950-1964 | IV Tibetan spiritual leader who crossed over to India                          |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(II),(B)-(III),(C)-(IV),(D)-(I)$",
+      "optionB": "$(A)-(I),(B)-(III),(C)-(II),(D)-(IV)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(III)$",
+      "optionD": "$(A)-(III),(C)-(I),(D)-(II)$",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 34,
+      "questionContent": "Arrange the main focus of different Five Year Plans in a chronological order:\n(A). The focus of Planning on agrarian sector\n(B). The focus of Planning on urban spaces\n(C). The focus of Planning on heavy industries\n(D). The focus of Planning on Liberalisation, Privatisation and Globalisation\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A) (B), (C), (D)",
+      "optionB": "(A), (C), (D), (B)",
+      "optionC": "(B), (A), (D), (C)",
+      "optionD": "(A), (C), (B), (D)",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 35,
+      "questionContent": "Which of the following statement is false about globalisation?",
+      "optionA": "Globalisation is free flow of goods, capital and labour",
+      "optionB": "Inequality is increasing due to globalisation",
+      "optionC": "Equality is increasing due to globalisation",
+      "optionD": "Globalisation will result in cultural homogensation",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 36,
+      "questionContent": "When Mizoram and Arunachal Pradesh became separate states?",
+      "optionA": "1987",
+      "optionB": "1978",
+      "optionC": "1960",
+      "optionD": "1972",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 37,
+      "questionContent": "Which among the following is not an outcome of the disintegration of the USSR ?",
+      "optionA": "End of the ideological war between the US and the USSR",
+      "optionB": "End of the arms race between the US and the USSR",
+      "optionC": "Change in the balance of power in the world order",
+      "optionD": "Crisis in Asia",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 38,
+      "questionContent": "Which of these statements are correct regarding Maharaja Ranjit Singh\n(A).He belong to Sukarchakiya clan\n(B).He signed the Treaty of Amritsar (1809)\n(C). Treaty of Amritsar (1809)was signed with the British East India compony\n(D). He signed the Treaty of Sarkhej with the French East India Company\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B) and (D) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(A), (B), (C) and (D)",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 39,
+      "questionContent": "Bombay Secretariat was designed by",
+      "optionA": "H. St Clair Wilkins",
+      "optionB": "F.W.Stevens",
+      "optionC": "Watson",
+      "optionD": "William S. Cohan",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 40,
+      "questionContent": "Which one of the following is a major agglomeration of population in the world?",
+      "optionA": "North Asia",
+      "optionB": "East Asia",
+      "optionC": "Central Asia",
+      "optionD": "West Asia",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 41,
+      "questionContent": "Which one of the following is NOT a measure of population density?",
+      "optionA": "Arithmetic desnsity",
+      "optionB": "Physiological density",
+      "optionC": "Nutrition Density",
+      "optionD": "Road Density",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 42,
+      "questionContent": "Identify correct statements with reference to climate of India.\n(A). The Tropic of Capricorn divides India into temperate and tropical climate regions.\n(B). Variability of rainfall in more in Rajasthan as compared to Odisha.\n(C). Northeast Monsoon season brings 60 percent of the annual precipitation.\n(D). Mango showers are pre-monsoon showers.\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A) and (C) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(B) and (D) only",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 43,
+      "questionContent": "propounded the concept of 'rurban community'.",
+      "optionA": "J.C Hudson",
+      "optionB": "K.H. Stone",
+      "optionC": "C.J. Galpin",
+      "optionD": "A. Meitzen",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 44,
+      "questionContent": "The term development is characteristic of the following:\nA. Multidimensional Concept\nB. Unidimensional Concept\nC. Qualitative Change\nD. Quantitative Change\n\n",
+      "optionA": "(A), (B) and (D) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(A), (B), (C) and (D).",
+      "optionD": "(A), (C) and (D) only.",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 45,
+      "questionContent": "Match List I with List II\n\n| LIST I   | LIST II (Name of the country Length of borders (in kms)) |\n| :------- | :------------------------------------------------------- |\n| A. China | I. 1751                                                  |\n| B. Pakistan | II. 3488                                                 |\n| C. Nepal | III. 699                                                 |\n| D. Bhutan | IV. 3323                                                 |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(I),(B)-(II),(C)-(III),(D)-(IV)$",
+      "optionB": "$(A)-(II),(B)-(IV),(C)-(I),(D)-(II)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(III)$",
+      "optionD": "$(A)-(III),(B)-(IV),(C)-(I),(D)-(II)$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 46,
+      "questionContent": "Arrange the regions of world in descending order on the basis of their area.\n(A). North America\n(B). Africa\n(C). Asia\n(D). Australia\n\nChoose the correct answer from the options given below:",
+      "optionA": "(C), (A), (B), (D)",
+      "optionB": "(C), (B), (A), (D)",
+      "optionC": "(B), (A), (D), (C)",
+      "optionD": "(C), (D), (B), (A)",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 47,
+      "questionContent": "Shifting cultivation is known as Ladang in",
+      "optionA": "North East India",
+      "optionB": "Kalahari region",
+      "optionC": "Patagonia plateau region",
+      "optionD": "Indonesia and Malaysia",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 48,
+      "questionContent": "Which one of the following is not a pull factor of migration?",
+      "optionA": "Better Job Opportunities",
+      "optionB": "Medical and Educational Facilities",
+      "optionC": "Water Scarcity",
+      "optionD": "Peace and Stability",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 49,
+      "questionContent": "Age-sex pyramid of is triangular shaped.",
+      "optionA": "Japan",
+      "optionB": "Australia",
+      "optionC": "Nigeria",
+      "optionD": "Norway",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 50,
+      "questionContent": "The concept of human development was introduced by",
+      "optionA": "Griffith Taylor",
+      "optionB": "Gilbert White",
+      "optionC": "Adam Smith",
+      "optionD": "Mahbub-ul-Haq",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 51,
+      "questionContent": "Which one of the following areas in USA has lost its ground as a leading producer of iron and steel industry?",
+      "optionA": "Cleveland",
+      "optionB": "Pittsburgh",
+      "optionC": "Chicago",
+      "optionD": "Lorain",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 52,
+      "questionContent": "has the largest tea cropped area of India.",
+      "optionA": "West Bengal",
+      "optionB": "Kerala",
+      "optionC": "Assam",
+      "optionD": "Himachal Pradesh",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 53,
+      "questionContent": "Match List I with List II\n\n| LIST I                | LIST II                                                                                                                |\n| :-------------------- | :--------------------------------------------------------------------------------------------------------------------- |\n| A. Secured Debentures | I. payable on the expiry of the specific period                                                                        |\n| B. Unsecured Debentures | II. a charge is created on the assets of the company for the purpose of payment in case of default.                    |\n| C. Perpetual Debentures | III. do not have a specific charge on the assets of the company.                                                       |\n| D. Redeemable Debentures | IV. the company does not give any undertaking for the repayment of such debentures.                                    |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(I),(B)-(II),(C)-(III),(D)-(IV)$",
+      "optionB": "$(A)-(II),(B)-(III),(C)-(IV),(D)-(I)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(III)$",
+      "optionD": "$(A)-(IV),(C)-(I),(D)-(II)$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 54,
+      "questionContent": "Balance sheet provides information about financial position of a company",
+      "optionA": "At a point of time",
+      "optionB": "Over a period of time of three months",
+      "optionC": "For a period of time of six months",
+      "optionD": "For a period of time of nine months",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 55,
+      "questionContent": "Debenture holders are the of a company",
+      "optionA": "Owner",
+      "optionB": "debtor",
+      "optionC": "Creditors",
+      "optionD": "Director",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 56,
+      "questionContent": "At the time of admission of a new partner, General reserve appearing in the old balance sheet is transferred to:",
+      "optionA": "All partner's capital account",
+      "optionB": "New partner's capital account",
+      "optionC": "Old partner's capital account",
+      "optionD": "Old Partner's current account",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 57,
+      "questionContent": "Profit for the following years are given.\n\n| 2013 | 4,00,000 |\n| :--- | :------- |\n| 2014 | 3,98,000 |\n| 2015 | 4,50,000 |\n| 2016 | 4,45,000 |\n| 2017 | 5,00,000 |\n\ncalculate goodwill of the firm on the basis of four year purchase of 5 year average profits.",
+      "optionA": "17,54,400",
+      "optionB": "18,50,500",
+      "optionC": "17,44,400",
+      "optionD": "19,54,000",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 58,
+      "questionContent": "Which ratio gives us the idea about the value of their holding and affects market price of the shares?",
+      "optionA": "Return on shareholder's fund",
+      "optionB": "Earning per share",
+      "optionC": "Book value per share",
+      "optionD": "Price to Earning ratio",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 59,
+      "questionContent": "Which of the following statements are incorrect?\n(A).Return to scale is a long run concept\n(B).Law of variable proportion is concerned only with long run concept.\n(C). There is only Constant return to scale in the Return to scale concept.\n(D). All the inpur factors are variable in law of variable proportion.\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B) and (D) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(A), (B), (C) and (D).",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 60,
+      "questionContent": "As per the Cobb-Douglas Production function, which of the following represents Increasing return to scale?\n$1. \\alpha+\\beta=1$\n$2. \\alpha+\\beta>1$\n$3. \\alpha+\\beta<1$\n$4. \\alpha+\\beta=0$",
+      "optionA": "$1. \\alpha+\\beta=1$",
+      "optionB": "$2. \\alpha+\\beta>1$",
+      "optionC": "$3. \\alpha+\\beta<1$",
+      "optionD": "$4. \\alpha+\\beta=0$",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 61,
+      "questionContent": "Which of the following is the most commonly used measure of money supply?",
+      "optionA": "M1",
+      "optionB": "M2",
+      "optionC": "M3",
+      "optionD": "M4",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 62,
+      "questionContent": "Which of the following is not a principle given by Henri fayol?",
+      "optionA": "Unity of command",
+      "optionB": "Unity of Direction",
+      "optionC": "Subordination of individual interest to general interest",
+      "optionD": "Harmony. Not discord",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 63,
+      "questionContent": "Which of the following are related to the Grapevine Networks?\n(A).Gossip Network\n(B).Cluster Network\n(C).Probability Network\n(D). Wheel network\n\nChoose the correct answer from the options given below:",
+      "optionA": "(B) and (D) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(A). (B), (C) and (D).",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 64,
+      "questionContent": "National Stock Exchange (NSE) was established in which year?",
+      "optionA": "1992",
+      "optionB": "1996",
+      "optionC": "2000",
+      "optionD": "1980",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 65,
+      "questionContent": "Make In India scheme was launched in the year:",
+      "optionA": "2016",
+      "optionB": "2015",
+      "optionC": "2014",
+      "optionD": "2013",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 66,
+      "questionContent": "Identify the examples of commercial food service establishments, from the following.\n(A).Mobile catering\n(B). Catering for seminars, workshops\n(C). Creches\n(D). Chain of catering organisations\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A), (B) and (D) only.",
+      "optionB": "(A), (B) and (C) only.",
+      "optionC": "(A). (B), (C) and (D).",
+      "optionD": "(B), (C) and (D) only.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 67,
+      "questionContent": "Arrange the steps involved in the Nutritional Care process during illness in correct sequence.\n(A). Assessing nutritional status\n(B). Diagnosis of nutritional problems\n(C). Evaluating nutritional care outcomes and making changes, if necessary\n(D). Planning and prioritising nutrition interventions(s) to meet nutritional needs\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A). (B). (C), (D).",
+      "optionB": "(A), (B), (D), (C).",
+      "optionC": "(B). (A). (D). (C).",
+      "optionD": "(C), (B). (D). ( ).",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 68,
+      "questionContent": "Which psychologist and educator had outlined the great need that children have for a concerned, caring and knowledgeable adult?",
+      "optionA": "Lev Vygotsky",
+      "optionB": "Erik Erikson",
+      "optionC": "Sigmund Freud",
+      "optionD": "Jean Piaget",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 69,
+      "questionContent": "Match List I with List II\n\n| LIST I (Fabric defects) |   LIST II (Faults)  |\n| :-------------------- | :---------------- |\n| A. Kink               |    I) Dyeing fault    |\n| B. Slub               |   II) Finishing fault |\n| C. Shaded             | III) Weaving fault |\n| D. Chafe              |  IV) Yarn fault     |\n\nChoose the correct answer from the options given below:",
+      "optionA": "$(A)-(I),(B)-(II),(C)-(III),(D)-(IV)$",
+      "optionB": "$(A)-(I),(B)-(III),(C)-(II),(D)-(IV)$",
+      "optionC": "$(A)-(I),(B)-(II),(C)-(IV),(D)-(II)$",
+      "optionD": "$(A)-(III),(B)-(IV),(C)-(I),(D)-(II)$",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 70,
+      "questionContent": "Arrange the steps involved in Guest Cycle in order of their implementation.\n(A). Departure\n(B). Arrival stage\n(C). Occupancy\n(D). Pre-arrival stage\n\nChoose the correct answer from the options given below:",
+      "optionA": "(A). (B). (C), (D).",
+      "optionB": "(D). (B) (C), (A).",
+      "optionC": "(B). (A). (D). (C).",
+      "optionD": "(C), (B). (D). (A).",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 71,
+      "questionContent": "Which of the following is NOT an example of interactive media?",
+      "optionA": "Gyan TV",
+      "optionB": "Internet",
+      "optionC": "Telephone",
+      "optionD": "e-mail",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 72,
+      "questionContent": "Identify the type of hospitality service establishment which offers rented accomodation especially for sleeping and may not offer food and other services.",
+      "optionA": "Furnished camps",
+      "optionB": "Motel",
+      "optionC": "Lodge",
+      "optionD": "Resort",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 73,
+      "questionContent": "In which year was the first Indian satellite (EDUSAT) built exlusively to serve the educational sector?",
+      "optionA": "2001",
+      "optionB": "2005",
+      "optionC": "2002",
+      "optionD": "2004",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 74,
+      "questionContent": "Identify the way through which Mrs Y can create rhythm in her dress.",
+      "optionA": "By using contrasting colours",
+      "optionB": "By putting gathers in waist, yolk or cuffs",
+      "optionC": "By using different unusual shapes and lines",
+      "optionD": "By using different textures",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 75,
+      "questionContent": "Which of the following type of disability is characterised by difficulties of movement. posture. speech, hand functions etc. due to brain damage?",
+      "optionA": "Locomotor disability",
+      "optionB": "Cerebral Palsy",
+      "optionC": "Autism",
+      "optionD": "Learning disability",
+      "answer": "B"
+    }
+  ]
+}

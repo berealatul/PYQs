@@ -1,14 +1,4 @@
 [
-  {
-    "name": "Tezpur University Entrance Exam",
-    "value": "tuee"
-  },
-  {
-    "name": "GATE",
-    "value": "gate"
-  },
-  {
-    "name": "UGC-NET",
-    "value": "ugcnet"
-  }
+  { "name": "Tezpur University Entrance Exam", "value": "tuee" },
+  { "name": "CUET-PG", "value": "cuetpg" }
 ]
