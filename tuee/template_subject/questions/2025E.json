@@ -2,453 +2,453 @@
   "questions": [
     {
       "questionNumber": 1,
-      "questionContent": "If an educator adheres strictly to the syllabus without considering students' comprehension levels, which teaching principle is being overlooked?",
-      "optionA": "Principle of Flexibility",
-      "optionB": "Principle of Logical Progression",
-      "optionC": "Principle of Student Diversity",
-      "optionD": "Principle of Feedback and Reinforcement",
+      "questionContent": "Which year was declared as the \"International Disability Year\" by UNO?",
+      "optionA": "1981",
+      "optionB": "1982",
+      "optionC": "1959",
+      "optionD": "1980",
       "answer": "A"
     },
     {
       "questionNumber": 2,
-      "questionContent": "The National Education Policy (NEP) 2020 in India aims to bridge the gap between education and employment by:",
-      "optionA": "Reinforcing memorization-based learning methods",
-      "optionB": "Promoting multidisciplinary and skill-oriented education",
-      "optionC": "Reducing government intervention in higher education",
-      "optionD": "Giving priority to theoretical concepts over hands-on training",
-      "answer": "B"
+      "questionContent": "Action research is concerned with problems that are",
+      "optionA": "Of general nature.",
+      "optionB": "Constituting universal truths.",
+      "optionC": "Of immediate concern and needs immediate solutions.",
+      "optionD": "Having long-range implications.",
+      "answer": "C"
     },
     {
       "questionNumber": 3,
-      "questionContent": "Which educational philosophy forms the foundation of the \"Learning by Doing\" principle?",
-      "optionA": "Behaviourism, which focuses on learning through stimulus-response conditioning",
-      "optionB": "Constructivism, which highlights active participation in learning",
-      "optionC": "Cognitivism, which solely emphasizes internal thought processes",
-      "optionD": "Essentialism, which prioritizes teacher-led instruction over experiential learning",
-      "answer": "B"
+      "questionContent": "The Charter Act of 1813 provided an annual expenditure of Rs for the revival and promotion of literature in India",
+      "optionA": "1 lac",
+      "optionB": "2 lacs",
+      "optionC": "3 lacs",
+      "optionD": "4 lacs",
+      "answer": "A"
     },
     {
       "questionNumber": 4,
-      "questionContent": "The \"Screening Hypothesis\" suggests that education primarily serves as:",
-      "optionA": "A means to enhance knowledge and competency",
-      "optionB": "A strategy for governments to invest in workforce development",
-      "optionC": "A tool for employers to identify efficient and skilled workers",
-      "optionD": "A mechanism to increase competition in the job market",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 5,
-      "questionContent": "What is the most significant factor contributing to a nation's sustained economic growth through education?",
-      "optionA": "Allocating more resources to research and innovation in higher education",
-      "optionB": "Enhancing access to vocational and technical training programs",
-      "optionC": "Decreasing the focus on STEM (Science, Technology, Engineering, and Mathematics) education",
-      "optionD": "Providing monetary incentives for the professional development of teachers",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 6,
-      "questionContent": "If an instructor requires students to memorize abstract definitions without offering concrete examples, which teaching maxim is being neglected?",
-      "optionA": "From Abstract to Concrete",
-      "optionB": "From Observation to Reasoning",
-      "optionC": "From Concrete to Abstract",
-      "optionD": "From Inductive to Deductive",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 7,
-      "questionContent": "Which statement best explains the concept of opportunity cost in education?",
-      "optionA": "The total tuition and associated fees for an academic program",
-      "optionB": "The cost of books, transportation, and learning materials",
-      "optionC": "Government spending on public educational institutions",
-      "optionD": "The potential earnings a student forfeits by choosing to study instead of working",
+      "questionContent": "Which of the following psychologists isn't related to behaviourism?",
+      "optionA": "Watson",
+      "optionB": "Skinner",
+      "optionC": "Hull",
+      "optionD": "Freud",
       "answer": "D"
     },
     {
-      "questionNumber": 8,
-      "questionContent": "A learner can solve advanced mathematical problems in class but struggles to apply similar concepts to real-world situations. What best explains this difficulty?",
-      "optionA": "The student lacks the cognitive skills necessary for abstract thinking",
-      "optionB": "The student has not received sufficient reinforcement for knowledge retention",
-      "optionC": "The student's understanding remains at a procedural level without deep conceptual grasp",
-      "optionD": "The student requires additional memorization techniques to retain the material",
+      "questionNumber": 5,
+      "questionContent": "Which University was not established during 1854-1858:",
+      "optionA": "Calcutta University",
+      "optionB": "Madras University",
+      "optionC": "Punjab University",
+      "optionD": "Bombay University",
       "answer": "C"
     },
     {
-      "questionNumber": 9,
-      "questionContent": "What does the concept of cultural relativism emphasize?",
-      "optionA": "Evaluating other cultures based on one's cultural norms",
-      "optionB": "Understanding and assessing cultures according to their values and context",
-      "optionC": "Assuming all cultures share identical beliefs and practices",
-      "optionD": "Promoting the superiority of one culture over others",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 10,
+      "questionNumber": 6,
       "questionContent": "Which branch of philosophy is concerned with the notion of nature, expression, and beauty?",
       "optionA": "Metaphysics",
       "optionB": "Epistemology",
       "optionC": "Aesthetics",
       "optionD": "Axiology",
-      "answer": "D"
+      "answer": "C"
     },
     {
-      "questionNumber": 11,
-      "questionContent": "According to Vygotsky's theory of learning, which instructional strategy best supports cognitive growth?",
-      "optionA": "Offering students highly structured materials with independent study time",
-      "optionB": "Engaging learners in peer collaboration and guided discussions within their Zone of Proximal Development (ZPD)",
-      "optionC": "Promoting rote memorization to ensure content mastery",
-      "optionD": "Allowing students unrestricted exploration of topics without instructor guidance",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 12,
-      "questionContent": "Which of the following does not play a crucial role in preserving cultural heritage?",
-      "optionA": "Incorporating traditional arts, literature, and customs into school curricula",
-      "optionB": "Supporting cultural exchange initiatives and community festivals",
-      "optionC": "Documenting oral traditions and indigenous knowledge for future generations",
-      "optionD": "Following the Western practices blindly",
-      "answer": "D"
-    },
-    {
-      "questionNumber": 13,
-      "questionContent": "How does integrating technology benefit cultural education?",
-      "optionA": "By providing greater access to virtual museums and historical archives",
-      "optionB": "By ensuring uniformity in cultural education worldwide",
-      "optionC": "By eliminating conventional teaching methods",
-      "optionD": "By reducing the significance of local cultural experiences",
-      "answer": "A"
-    },
-    {
-      "questionNumber": 14,
-      "questionContent": "The most effective strategy for a developing nation striving for accessible yet financially sustainable education is",
-      "optionA": "Relying solely on government taxation for educational funding",
-      "optionB": "Cutting public funding and enforcing complete self-financing in education",
-      "optionC": "Abolishing tuition fees for all academic levels, irrespective of economic background",
-      "optionD": "Implementing a Public-Private Partnership (PPP) to distribute financial responsibilities",
-      "answer": "D"
-    },
-    {
-      "questionNumber": 15,
+      "questionNumber": 7,
       "questionContent": "The purpose of knowledge is determined by:",
       "optionA": "Psychologist",
       "optionB": "Philosopher",
       "optionC": "Sociologist",
       "optionD": "Economist",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 8,
+      "questionContent": "Education acquired without any specific purpose, fixed period, or place is called.",
+      "optionA": "Indirect Education",
+      "optionB": "Individual Education",
+      "optionC": "Informal Education",
+      "optionD": "Formal Education",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 9,
+      "questionContent": "ERIC, which sponsors research projects in education, is a unit of",
+      "optionA": "UGC",
+      "optionB": "NCERT",
+      "optionC": "NCTE",
+      "optionD": "NUEPA",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 10,
+      "questionContent": "SWAYAM (Study Webs of Active Learning for Young Aspiring Minds) was launched in",
+      "optionA": "2016",
+      "optionB": "2014",
+      "optionC": "2015",
+      "optionD": "2017",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 11,
+      "questionContent": "Life skill education is needed",
+      "optionA": "to adopt to one's own culture",
+      "optionB": "to enhance vocational efficiency",
+      "optionC": "to promote cultural integration",
+      "optionD": "to face the challenges in life effectively",
       "answer": "D"
     },
     {
+      "questionNumber": 12,
+      "questionContent": "Which philosophical view assumes that the child's mind at birth is a \"blank tablet\"?",
+      "optionA": "Original sin",
+      "optionB": "Tabula rasa",
+      "optionC": "Determinism",
+      "optionD": "Innate goodness",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 13,
+      "questionContent": "MOOC stands for",
+      "optionA": "Massive Online Objective Course",
+      "optionB": "Massive Online Open Course",
+      "optionC": "Massive Open Online Course",
+      "optionD": "Mass Online Open Course",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 14,
+      "questionContent": "The concept of \"reinforcement\" is an important element of",
+      "optionA": "Classical conditioning theory of learning",
+      "optionB": "Operant conditioning theory of learning",
+      "optionC": "Gestalt theory of learning",
+      "optionD": "Trial and error theory of learning",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 15,
+      "questionContent": "Which psychologist is associated with the theory of insightful learning?",
+      "optionA": "E.L. Thorndike",
+      "optionB": "Wolfgang Kohler",
+      "optionC": "B.F. Skinner",
+      "optionD": "Albert Bandura",
+      "answer": "B"
+    },
+    {
       "questionNumber": 16,
-      "questionContent": "What is a major challenge in managing education in developing nations?",
-      "optionA": "Over-reliance on digital tools in classrooms",
-      "optionB": "Absence of government regulations in the education sector",
-      "optionC": "Insufficient funding and resource allocation",
-      "optionD": "Excessive teacher recruitment without proportionate student enrolment growth",
+      "questionContent": "What is the name of the Yashpal Committee Report (1993)?",
+      "optionA": "ICT in teacher education",
+      "optionB": "Learning through broadcasting",
+      "optionC": "Learning without burden",
+      "optionD": "Education and National Development",
       "answer": "C"
     },
     {
       "questionNumber": 17,
-      "questionContent": "Which leadership style in education is characterized by inspiring and driving significant institutional change?",
-      "optionA": "Transactional Leadership",
-      "optionB": "Transformational Leadership",
-      "optionC": "Laissez-Faire Leadership",
-      "optionD": "Autocratic Leadership",
+      "questionContent": "Which of the following is a key principle of behaviourism?",
+      "optionA": "Learners construct their knowledge.",
+      "optionB": "Learning is influenced by environmental stimuli.",
+      "optionC": "Learning is a social process.",
+      "optionD": "Learning is guided by intrinsic motivation.",
       "answer": "B"
     },
     {
       "questionNumber": 18,
-      "questionContent": "The theory that emphasizes prior knowledge as a fundamental factor in learning is:",
-      "optionA": "Behaviourism",
-      "optionB": "Cognitivism",
-      "optionC": "Heutagogy",
-      "optionD": "Humanism",
+      "questionContent": "According to Vygotsky, which type of learning is considered most effective?",
+      "optionA": "Independent learning",
+      "optionB": "Learning in collaboration with others",
+      "optionC": "Memorization through repetition",
+      "optionD": "Learning by observing media",
       "answer": "B"
     },
     {
       "questionNumber": 19,
-      "questionContent": "Who is regarded as the pioneer of Behaviourism?",
-      "optionA": "Jean Piaget",
-      "optionB": "B.F. Skinner",
-      "optionC": "John B. Watson",
-      "optionD": "Albert Bandura",
+      "questionContent": "In which stage of Piaget's theory do children begin to think logically about concrete events?",
+      "optionA": "Sensorimotor Stage",
+      "optionB": "Preoperational Stage",
+      "optionC": "Concrete Operational Stage",
+      "optionD": "Formal Operational Stage",
       "answer": "C"
     },
     {
       "questionNumber": 20,
-      "questionContent": "Which scenario best exemplifies scaffolding in a classroom setting?",
-      "optionA": "Teachers assign complex problems to students without assistance",
-      "optionB": "Teachers demonstrate a concept first, then gradually allow students to practice independently",
-      "optionC": "Students learn entirely on their own, without teachers intervention",
-      "optionD": "Memorization of facts without understanding their application",
+      "questionContent": "What does the term \"extinction\" refer to in the context of behaviourism?",
+      "optionA": "A behaviour that is reinforced too frequently",
+      "optionB": "The gradual disappearance of a learned behaviour when reinforcement stops",
+      "optionC": "The introduction of new stimuli",
+      "optionD": "The development of a new behaviour",
       "answer": "B"
     },
     {
       "questionNumber": 21,
-      "questionContent": "Who introduced the concept of unconscious motivation?",
-      "optionA": "William James",
-      "optionB": "Carl Rogers",
-      "optionC": "Sigmund Freud",
-      "optionD": "John Watson",
-      "answer": "C"
+      "questionContent": "The meaningful learning theory was explained by",
+      "optionA": "Robert Gagne",
+      "optionB": "David Ausubel",
+      "optionC": "Jean Piaget",
+      "optionD": "Jerom S. Bruner",
+      "answer": "B"
     },
     {
       "questionNumber": 22,
-      "questionContent": "In Herzberg's Two-Factor Theory, which is classified as a Motivator?",
-      "optionA": "Salary",
-      "optionB": "Job security",
-      "optionC": "Recognition",
-      "optionD": "Work conditions",
+      "questionContent": "The doctrine of eternal forms was laid down by",
+      "optionA": "Upanishads",
+      "optionB": "Vedas",
+      "optionC": "Plato",
+      "optionD": "Socrates",
       "answer": "C"
     },
     {
       "questionNumber": 23,
-      "questionContent": "A teacher employs an inquiry-based approach where students explore a topic, pose questions, and seek answers before formal instruction. This method aligns with:",
-      "optionA": "Deductive reasoning",
-      "optionB": "Cognitive dissonance theory",
-      "optionC": "Transfer of learning",
-      "optionD": "Inductive reasoning",
-      "answer": "D"
+      "questionContent": "Which of the following exercises most closely aligns with the constructivist approach?",
+      "optionA": "Using the river's colour to determine the presence of pollutants",
+      "optionB": "Observing the different kinds of bird beaks and drawing them",
+      "optionC": "Outlining the distinctions between animals that lay eggs and those that give birth using a graphic organizer",
+      "optionD": "Outlining the process of seed dispersal with a flowchart",
+      "answer": "A"
     },
     {
       "questionNumber": 24,
+      "questionContent": "Which educational activity is most desirable to the pragmatist?",
+      "optionA": "That Complies with the objectives established by educational scientists",
+      "optionB": "That results from the indiscrimination of the pupil in democratic theory.",
+      "optionC": "That has a positive impact on the student's future experiences.",
+      "optionD": "That is characterized by continuously pleasurable activity.",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 25,
+      "questionContent": "What is the viewpoint of progressive educators regarding the issue of liberal vs. vocational education?",
+      "optionA": "Vocational ends load one to degrade learning.",
+      "optionB": "Liberal arts subjects should proceed with vocational training",
+      "optionC": "Vocational and liberal education should not be separated",
+      "optionD": "Selected subjects should have vocational orientation.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 26,
+      "questionContent": "The first committee to be constituted after independence by the Government of India on Women's Education was",
+      "optionA": "Sri Prakasa Committee",
+      "optionB": "Durgabai Deshmukh Committee",
+      "optionC": "Dr.Radhakrishnan Committee",
+      "optionD": "Dr. Balwantrai Mehta Committee",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 27,
+      "questionContent": "Peer review in research refers to",
+      "optionA": "The process of collecting data from a selected group of peers.",
+      "optionB": "The process of having experts in the field before publication.",
+      "optionC": "The process of conducting research with a team of peers.",
+      "optionD": "The process of presenting research findings to a peer audience.",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 28,
+      "questionContent": "Which are the following three categories of intelligence by Thorndike?",
+      "optionA": "Normal, Above normal, and Below normal",
+      "optionB": "Linguistic, Musical, and Place (Local)",
+      "optionC": "Abstract, mechanical, and social",
+      "optionD": "Logical, interpersonal, and interpersonal",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 29,
+      "questionContent": "In Vygotsky's theory, what does the concept of \"scaffolding\" mean?",
+      "optionA": "Helping in the form of direct teaching",
+      "optionB": "Support provided by others to help learners accomplish tasks",
+      "optionC": "Encouraging self-learning and discovery",
+      "optionD": "Reducing external stimuli to increase focus",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 30,
+      "questionContent": "Which of the following is an example of classical conditioning?",
+      "optionA": "A dog salivates to the sound of a bell after it is paired with food.",
+      "optionB": "A student is studying to avoid getting punished.",
+      "optionC": "A child being rewarded for doing homework.",
+      "optionD": "A person learning to drive by watching instructional videos",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 31,
+      "questionContent": "Operation Blackboard aimed to provide",
+      "optionA": "Physical facilities",
+      "optionB": "Kitchen facilities",
+      "optionC": "Playground facilities",
+      "optionD": "Examination facilities",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 32,
+      "questionContent": "The difference in the pace of progress of material and non-material culture is called.",
+      "optionA": "Technological lag",
+      "optionB": "Cultural lag",
+      "optionC": "Material lag",
+      "optionD": "Social lag",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 33,
+      "questionContent": "The concept of 'Negative Education' was given by",
+      "optionA": "Aristotle",
+      "optionB": "Rousseau",
+      "optionC": "Frobel",
+      "optionD": "Dewey",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 34,
+      "questionContent": "Children with special needs (CWSN) are asked to fit into pre-existing structures in",
+      "optionA": "Integrated Education",
+      "optionB": "Inclusive Education",
+      "optionC": "Special Education",
+      "optionD": "General Education",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 35,
+      "questionContent": "NCTE stands for",
+      "optionA": "National Council of Teacher Education",
+      "optionB": "National Council for Teacher Education",
+      "optionC": "National Council of Technical Education.",
+      "optionD": "National Council for Technical Education",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 36,
+      "questionContent": "Which of the following phrases best sums up the law of effect?",
+      "optionA": "Think Before You Act",
+      "optionB": "If You Can't Beat Them, Join Them",
+      "optionC": "If It Works, Repeat It",
+      "optionD": "Measure Twice, Cut Once",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 37,
+      "questionContent": "Deschooling Society is a book by",
+      "optionA": "I. Illich",
+      "optionB": "P. Friere",
+      "optionC": "J. Dewey",
+      "optionD": "S. Freud",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 38,
+      "questionContent": "The primary characteristic of children with 'dyslexia' includes?",
+      "optionA": "Attention deficit disorders",
+      "optionB": "Divergent thinking; fluency in reading",
+      "optionC": "Engaging in repetitive locomotor actions",
+      "optionD": "Inability to read fluently",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 39,
+      "questionContent": "In which year was the UN Convention on the Rights of Persons with Disabilities held?",
+      "optionA": "2004",
+      "optionB": "2005",
+      "optionC": "2006",
+      "optionD": "2007",
+      "answer": "D"
+    },
+    {
+      "questionNumber": 40,
+      "questionContent": "Raveena believes that green plants eat food like animals do instead of producing food. She considers this idea because she puts \"plant food\" on her mom's plants each week. Of the following, which principle of cognitive learning theory is best illustrated by Raveena's thinking?",
+      "optionA": "Knowledge that is constructed depends on knowledge that learners already possess.",
+      "optionB": "People are mentally active in their attempts to understand how the world works.",
+      "optionC": "Learners construct knowledge to make sense of their experiences.",
+      "optionD": "Learning requires practice and feedback.",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 41,
+      "questionContent": "Education as a subject of legislation figures in the",
+      "optionA": "Union List",
+      "optionB": "State List",
+      "optionC": "Concurrent List",
+      "optionD": "Residuary Powers",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 42,
+      "questionContent": "The most difficult part in doing Cost Benefit Analysis is:",
+      "optionA": "Intangible benefits and costs",
+      "optionB": "Tangible benefits and cost",
+      "optionC": "Private economic cost",
+      "optionD": "Total monetary expenditure",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 43,
+      "questionContent": "An ongoing counselling process throughout an individual's life span is considered as",
+      "optionA": "Preventive counselling",
+      "optionB": "Developmental counselling",
+      "optionC": "Crisis counselling",
+      "optionD": "Facilitative counselling",
+      "answer": "B"
+    },
+    {
+      "questionNumber": 44,
+      "questionContent": "A child scolded by his father who may hit his younger siblings is an example of",
+      "optionA": "Displacement",
+      "optionB": "Rationalization",
+      "optionC": "Regression",
+      "optionD": "Repression",
+      "answer": "A"
+    },
+    {
+      "questionNumber": 45,
+      "questionContent": "Differentiated Instruction means",
+      "optionA": "Teaching all students in the same way regardless of their abilities and needs",
+      "optionB": "Adhering strictly to a standardized curriculum",
+      "optionC": "Tailoring instruction to meet individual students' learning styles and abilities",
+      "optionD": "Providing identical assessments to all students",
+      "answer": "C"
+    },
+    {
+      "questionNumber": 46,
       "questionContent": "What does \"PDCA\" stand for in the theory of Total Quality Management (TQM)?",
       "optionA": "Play, Dig, Cry, Act",
       "optionB": "Plan, Do, Carry, Act",
       "optionC": "Plan, Do, Check, Act",
       "optionD": "Publish, Dashboard, Careful, Act",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 25,
-      "questionContent": "Which principle is primarily associated with Operant conditioning?",
-      "optionA": "Motivation",
-      "optionB": "Readiness",
-      "optionC": "Reinforcement",
-      "optionD": "Interest",
       "answer": "C"
-    },
-    {
-      "questionNumber": 26,
-      "questionContent": "A teacher incorporates real-world examples to enhance student engagement. This best aligns with:",
-      "optionA": "Motivation",
-      "optionB": "Reinforcement",
-      "optionC": "Socialization",
-      "optionD": "Readiness",
-      "answer": "A"
-    },
-    {
-      "questionNumber": 27,
-      "questionContent": "Navodaya Schools have been established to",
-      "optionA": "Increase number of schools in rural areas",
-      "optionB": "Provide good education in rural areas",
-      "optionC": "Complete 'Sarva Shiksha Abhiyan'",
-      "optionD": "Check wastage of education in rural areas",
-      "answer": "A"
-    },
-    {
-      "questionNumber": 28,
-      "questionContent": "Critical pedagogy firmly believes that",
-      "optionA": "The learners need not reason independently.",
-      "optionB": "What children learn out of school is irrelevant",
-      "optionC": "The experiences and perceptions of learners are important",
-      "optionD": "The teacher should always lead the classroom instruction",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 29,
-      "questionContent": "Which philosopher is most closely associated with Idealism in education?",
-      "optionA": "John Locke",
-      "optionB": "B.F. Skinner",
-      "optionC": "Plato",
-      "optionD": "Karl Marx",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 30,
-      "questionContent": "Which principle is being applied When an educator emphasizes critical thinking and problem-solving over memorization?",
-      "optionA": "Principle of Logical Thinking",
-      "optionB": "Principle of Readiness",
-      "optionC": "Principle of Self-Activity",
-      "optionD": "Principle of Individual Differences",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 31,
-      "questionContent": "Which of the following was not an educational initiative started by Mahatma Gandhi?",
-      "optionA": "Auro Villa",
-      "optionB": "Tolstoy Farm",
-      "optionC": "Sevagram Ashram",
-      "optionD": "Phoenix Settlement",
-      "answer": "A"
-    },
-    {
-      "questionNumber": 32,
-      "questionContent": "Inclusive education",
-      "optionA": "Celebrates diversity in the classroom",
-      "optionB": "Encourages strict admission procedures",
-      "optionC": "Includes indoctrination of facts",
-      "optionD": "Includes teachers from marginalised groups",
-      "answer": "A"
-    },
-    {
-      "questionNumber": 33,
-      "questionContent": "Aurobindo's educational philosophy aligns most closely with which Western thinker?",
-      "optionA": "John Dewey",
-      "optionB": "Rousseau",
-      "optionC": "Plato",
-      "optionD": "Karl Marx",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 34,
-      "questionContent": "Which institution was founded by Dr. B.R. Ambedkar to advance education among marginalized groups?",
-      "optionA": "Nalanda University",
-      "optionB": "Banaras Hindu University",
-      "optionC": "Indian Institute of Science",
-      "optionD": "People's Education Society (PES)",
-      "answer": "D"
-    },
-    {
-      "questionNumber": 35,
-      "questionContent": "Which slogan is associated with Dr. B.R. Ambedkar, reflecting his vision for education and empowerment?",
-      "optionA": "\"Knowledge is Power\"",
-      "optionB": "\"Educate, Agitate, Organize\"",
-      "optionC": "\"Give me blood, and I will give you freedom.\"",
-      "optionD": "\"Truth Alone Triumphs\"",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 36,
-      "questionContent": "In Bloom's taxonomy, which cognitive level involves breaking down information into its essential components to understand its structure?",
-      "optionA": "Applying",
-      "optionB": "Understanding",
-      "optionC": "Analysing",
-      "optionD": "Remembering",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 37,
-      "questionContent": "According to Jean Piaget, which cognitive development stage is characterized by the ability to think abstractly?",
-      "optionA": "Sensorimotor stage",
-      "optionB": "Preoperational stage",
-      "optionC": "Concrete operational stage",
-      "optionD": "Formal operational stage",
-      "answer": "D"
-    },
-    {
-      "questionNumber": 38,
-      "questionContent": "In Bloom's Taxonomy, which domain focuses on developing physical and manual skills?",
-      "optionA": "Cognitive Domain",
-      "optionB": "Affective Domain",
-      "optionC": "Psychomotor Domain",
-      "optionD": "Conceptual Domain",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 39,
-      "questionContent": "In 1994, UNESCO issued a landmark declaration promoting inclusive education in mainstream schools. What was the name of this declaration?",
-      "optionA": "The Right to Education Act",
-      "optionB": "The Education for All Handicapped Children Act",
-      "optionC": "The Individuals with Disabilities Education Act",
-      "optionD": "The Salamanca Statement",
-      "answer": "D"
-    },
-    {
-      "questionNumber": 40,
-      "questionContent": "Which Indian legislation guarantees free and mandatory education for children aged 6 to 14, including those with disabilities?",
-      "optionA": "Rights of Persons with Disabilities (RPwD) Act, 2016",
-      "optionB": "Right to Education (RTE) Act, 2009",
-      "optionC": "National Education Policy (NEP) 2020",
-      "optionD": "Rehabilitation Council of India (RCI) Act, 1992",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 41,
-      "questionContent": "Under the Rights of Persons with Disabilities (RPwD) Act, 2016, the number of officially recognized disabilities increased from 7 to how many?",
-      "optionA": "10",
-      "optionB": "14",
-      "optionC": "21",
-      "optionD": "25",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 42,
-      "questionContent": "Which intelligence theory states that intelligence consists of three key components: analytical, creative, and practical abilities?",
-      "optionA": "Spearman's Two-Factor Theory",
-      "optionB": "Cattell-Horn's Theory",
-      "optionC": "Carroll's Three-Stratum Theory",
-      "optionD": "Sternberg's Triarchic Theory",
-      "answer": "D"
-    },
-    {
-      "questionNumber": 43,
-      "questionContent": "Which intelligence assessment is used to evaluate abstract thinking and is considered culturally unbiased?",
-      "optionA": "Stanford-Binet Intelligence Test",
-      "optionB": "Wechsler Intelligence Scale for Children (WISC)",
-      "optionC": "Raven's Progressive Matrices",
-      "optionD": "Wechsler Adult Intelligence Scale (WAIS)",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 44,
-      "questionContent": "According to Freud's psychoanalytic theory, which part of personality functions based on the \"reality principle\"?",
-      "optionA": "Id",
-      "optionB": "Ego",
-      "optionC": "Superego",
-      "optionD": "Unconscious mind",
-      "answer": "B"
-    },
-    {
-      "questionNumber": 45,
-      "questionContent": "Carl Rogers' concept of \"self-actualization,\" which emphasizes personal growth and fulfilling one's potential, is part of which personality theory?",
-      "optionA": "Trait Theory",
-      "optionB": "Psychoanalytic Theory",
-      "optionC": "Humanistic Theory",
-      "optionD": "Social-Cognitive Theory",
-      "answer": "C"
-    },
-    {
-      "questionNumber": 46,
-      "questionContent": "Who said that \"social stratification is a process by which individuals and groups are ranked in a more or less enduring hierarchy of status\"?",
-      "optionA": "A. P. Sorokin",
-      "optionB": "Ogburn and Nimkoff",
-      "optionC": "B. K. Marx",
-      "optionD": "T. Parsons",
-      "answer": "D"
     },
     {
       "questionNumber": 47,
-      "questionContent": "Why is self-actualization positioned at the top of Maslow's hierarchy?",
-      "optionA": "It is the easiest level to attain.",
-      "optionB": "It is a natural phase that all individuals reach.",
-      "optionC": "It represents personal growth and the realization of one's full potential, achievable only after fulfilling basic needs.",
-      "optionD": "It is necessary for survival before addressing fundamental needs like food and security.",
+      "questionContent": "The type of culture belonging to attitudes, religious beliefs, moral beliefs, and etiquette is known as",
+      "optionA": "Material culture",
+      "optionB": "Intellectual culture",
+      "optionC": "Non-material culture",
+      "optionD": "Industrial culture",
       "answer": "C"
     },
     {
       "questionNumber": 48,
-      "questionContent": "The educational principle \"From whole to part\" is emphasized in which psychological approach?",
-      "optionA": "Gestalt Theory",
-      "optionB": "Behaviourism",
-      "optionC": "Constructivism",
-      "optionD": "Cognitivism",
+      "questionContent": "Non-directive counselling is also called",
+      "optionA": "Client-centred Counselling",
+      "optionB": "Counselling",
+      "optionC": "Integrated Counselling",
+      "optionD": "Suggestive Counselling",
       "answer": "A"
     },
     {
       "questionNumber": 49,
-      "questionContent": "The principle of individual differences suggests that educators should:",
-      "optionA": "Follow a uniform teaching method for all students",
-      "optionB": "Adapt to students' unique abilities and learning styles",
-      "optionC": "Overlook slow learners and prioritize fast learners",
-      "optionD": "Rely exclusively on group learning strategies",
-      "answer": "B"
+      "questionContent": "The foundation stage of education as per NEP 2020 covers",
+      "optionA": "5 years",
+      "optionB": "3 years",
+      "optionC": "4 years",
+      "optionD": "2 years",
+      "answer": "A"
     },
     {
       "questionNumber": 50,
-      "questionContent": "The principle of \"Motivation in Learning\" suggests that:\n\nA. External rewards are the sole method to enhance learning\nB. A well-structured and engaging learning environment fosters curiosity and interest\nC. Repetitive instruction alone ensures better comprehension\nD. Learning must be strictly structured and directed by the teacher",
-      "optionA": "A. External rewards are the sole method to enhance learning",
-      "optionB": "B. A well-structured and engaging learning environment fosters curiosity and interest",
-      "optionC": "C. Repetitive instruction alone ensures better comprehension",
-      "optionD": "D. Learning must be strictly structured and directed by the teacher",
-      "answer": "B"
+      "questionContent": "Aurobindo Ghosh talked about",
+      "optionA": "Integral Education",
+      "optionB": "Philosophical Education",
+      "optionC": "Theological Education",
+      "optionD": "Psychological Education",
+      "answer": "A"
     }
   ]
 }
