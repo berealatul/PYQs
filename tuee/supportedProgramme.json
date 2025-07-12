@@ -1,10 +1,5 @@
 [
-  {
-    "name": "B.Ed.",
-    "value": "bed"
-  },
-  {
-    "name": "MA in Sociology",
-    "value": "sociology"
-  }
+  { "name": "B.Ed.", "value": "bed" },
+  { "name": "MA in Sociology", "value": "ma_sociology" },
+  { "name": "MA in Education", "value": "ma_education" }
 ]
